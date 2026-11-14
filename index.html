@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>함택스세무회계 | 대표세무사 함석환</title>
+<meta name="description" content="강남 함택스세무회계 대표세무사 함석환. 양도·증여·상속세와 자금조달계획서, 기장·신고까지 대표세무사가 직접 상담합니다. 서울경제 「택스 리얼리티」 칼럼 연재.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="함택스세무회계 | 대표세무사 함석환">
+<meta property="og:description" content="양도·증여·상속세, 대표세무사가 직접 상담합니다. 서울 강남구 논현로79길 62 백악빌딩 602호">
+<meta property="og:image" content="og.jpg">
+<meta name="theme-color" content="#2E6CB8">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AccountingService","name":"함택스세무회계","founder":"함석환","logo":"logo.svg","telephone":"010-5099-6351","faxNumber":"0504-284-6351","email":"hamstax@naver.com","address":{"@type":"PostalAddress","streetAddress":"논현로79길 62, 백악빌딩 602호","addressLocality":"강남구","addressRegion":"서울특별시","addressCountry":"KR"},"openingHours":"10:00-19:00","sameAs":["https://blog.naver.com/hamstax","https://pf.kakao.com/_CzTxan","https://kmong.com/@%ED%95%A8%EC%84%9D%ED%99%98%EC%84%B8%EB%AC%B4%EC%82%AC"]}
+</script>
+<style>
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{color:var(--body);background:var(--bg);line-height:1.7;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:var(--max,1160px);margin:0 auto;padding:0 24px}
+section{scroll-margin-top:76px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:54px;padding:0 26px;border-radius:var(--btn-r,12px);font-weight:700;font-size:16px;border:0;cursor:pointer;transition:transform .15s,background .2s,box-shadow .2s,color .2s,border-color .2s;white-space:nowrap}
+.btn:active{transform:scale(.98)}
+.btn svg{width:19px;height:19px}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{background:var(--brand-d)}
+/* nav (mobile) */
+.burger{display:none;width:44px;height:44px;border:0;background:none;cursor:pointer;color:inherit;place-items:center}
+.burger svg{width:26px;height:26px}
+/* form */
+.field{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
+.field label{font-size:14px;font-weight:700;color:var(--ink)}
+.field label i{color:var(--brand);font-style:normal;margin-left:2px}
+.field input,.field select,.field textarea{width:100%;border:1px solid var(--line-2);border-radius:var(--in-r,10px);padding:13px 14px;font-size:16px;background:#fff;outline:none;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
+.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:18px;padding-right:38px}
+.field textarea{min-height:130px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--brand);box-shadow:0 0 0 4px var(--focus)}
+.field.err input,.field.err textarea{border-color:#DC2626}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.agree{display:flex;align-items:flex-start;gap:10px;font-size:14px;margin:4px 0 22px}
+.agree input{width:20px;height:20px;margin-top:2px;accent-color:var(--brand);flex:none}
+.agree button{background:none;border:0;color:var(--brand);text-decoration:underline;cursor:pointer;font-size:14px;padding:0}
+form .btn{width:100%}
+.msg{display:none;margin-top:16px;padding:14px 16px;border-radius:10px;font-size:15px}
+.msg.ok{display:block;background:#ECFDF5;color:#065F46;border:1px solid #A7F3D0}
+.msg.bad{display:block;background:#FEF2F2;color:#991B1B;border:1px solid #FECACA}
+.hp{position:absolute;left:-9999px}
+/* modal */
+.modal{position:fixed;inset:0;z-index:100;background:rgba(15,23,42,.55);display:none;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal-box{background:#fff;color:#334155;border-radius:16px;max-width:560px;width:100%;max-height:85vh;overflow:auto;padding:30px}
+.modal-box h3{font-size:20px;color:#0F172A;margin-bottom:14px}
+.modal-box h4{font-size:15px;color:#0F172A;margin:14px 0 4px}
+.modal-box p{font-size:14px}
+.modal-box .btn{margin-top:22px;width:100%;height:48px}
+/* stars */
+.stars{display:inline-flex;gap:2px;color:#F5B400}
+.stars svg{width:15px;height:15px}
+/* mobile bar */
+.mbar{display:none}
+/* reveal */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media (max-width:860px){
+  .burger{display:grid}
+  .menu{position:fixed;inset:var(--hdr-h,72px) 0 auto 0;background:#fff;flex-direction:column;align-items:stretch!important;gap:0!important;padding:8px 20px 20px;box-shadow:0 20px 30px -20px rgba(0,0,0,.25);display:none!important}
+  .menu.open{display:flex!important}
+  .menu li a{display:block;padding:15px 4px;color:#0F172A!important;border-bottom:1px solid #E2E8F0;font-size:16px}
+  .menu li:last-child a{border:0;margin-top:14px;height:50px;display:flex;align-items:center;justify-content:center;color:#fff!important}
+  body{padding-bottom:72px}
+  .mbar{display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;padding:10px 12px calc(10px + env(safe-area-inset-bottom));box-shadow:0 -6px 20px -10px rgba(0,0,0,.2)}
+  .mbar a{height:50px;border-radius:12px;display:flex;align-items:center;justify-content:center;gap:6px;font-weight:700;font-size:15px}
+  .mbar svg{width:19px;height:19px}
+  .mbar .m-tel{background:var(--soft);color:var(--brand)}
+  .mbar .m-kakao{background:#FEE500;color:#191919}
+  .mbar .m-form{background:var(--brand);color:#fff}
+}
+@media (max-width:560px){.wrap{padding:0 20px}.frow{grid-template-columns:1fr;gap:0}}
+
+
+:root{--brand:#2E6CB8;--brand-d:#245694;--brand-l:#E8F1FC;--ink:#191F28;--body:#4E5968;--muted:#8B95A1;--line:#E5E8EB;--line-2:#D1D6DB;--soft:#F2F4F6;--bg:#fff;--focus:rgba(46,108,184,.15);--btn-r:14px;--in-r:12px;--hdr-h:68px}
+body{font-family:"Pretendard","Noto Sans KR",-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif}
+h1,h2,h3{color:var(--ink);letter-spacing:-.03em}
+.eyebrow{display:inline-block;font-size:15px;font-weight:700;color:var(--brand);margin-bottom:12px}
+h2.t{font-size:clamp(28px,4vw,44px);line-height:1.3;font-weight:800}
+.lead{font-size:18px;color:var(--body);margin-top:14px;max-width:620px}
+section.pad{padding:120px 0}
+.center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
+.btn-soft{background:var(--soft);color:var(--ink)}
+.btn-soft:hover{background:#E5E8EB}
+/* header */
+header{position:fixed;inset:0 0 auto;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:saturate(1.6) blur(14px);transition:box-shadow .2s}
+header.scrolled{box-shadow:0 1px 0 var(--line)}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between}
+.logo img{height:36px;width:auto}
+.menu{display:flex;align-items:center;gap:6px;list-style:none}
+.menu a{font-size:15px;color:var(--body);font-weight:600;padding:9px 14px;border-radius:10px;transition:background .2s,color .2s}
+.menu a:hover{background:var(--soft);color:var(--ink)}
+.menu .btn{height:42px;padding:0 18px;font-size:14px;color:#fff;margin-left:8px}
+.menu .btn:hover{background:var(--brand-d);color:#fff}
+/* hero */
+.hero{padding:150px 0 100px;background:linear-gradient(180deg,#F5F9FF 0%,#fff 100%);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px 8px 10px;font-size:14px;font-weight:600;color:var(--ink);box-shadow:0 4px 14px -8px rgba(0,0,0,.15)}
+.badge .stars svg{width:14px;height:14px}
+.badge b{color:var(--brand)}
+.hero h1{font-size:clamp(38px,5.6vw,64px);line-height:1.2;font-weight:800;margin:24px 0 22px}
+.hero h1 .hl{color:var(--brand)}
+.hero .sub{font-size:19px;color:var(--body);max-width:520px}
+.hero .cta{display:flex;gap:10px;margin-top:36px;flex-wrap:wrap}
+.hero-vis{position:relative;justify-self:center;width:100%;max-width:440px}
+.hero-vis .ph{border-radius:32px;overflow:hidden;aspect-ratio:4/5;background:#7d7e80;box-shadow:0 40px 80px -30px rgba(25,31,40,.35)}
+.hero-vis .ph img{width:100%;height:100%;object-fit:cover}
+.bubble{position:absolute;background:#fff;border-radius:18px;padding:14px 16px;box-shadow:0 16px 40px -12px rgba(25,31,40,.25);font-size:14px;color:var(--ink);font-weight:600;max-width:250px;line-height:1.5;animation:float 6s ease-in-out infinite}
+.bubble small{display:block;color:var(--muted);font-weight:500;font-size:12px;margin-top:6px}
+.bubble .stars svg{width:12px;height:12px}
+.b1{left:-90px;top:52%}
+.b2{right:-60px;top:74%;animation-delay:-2s}
+.b3{display:none}
+.namecard{position:absolute;right:18px;top:18px;background:rgba(255,255,255,.95);border-radius:14px;padding:10px 14px;font-size:13px;color:var(--body)}
+.namecard b{display:block;color:var(--ink);font-size:17px}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media (prefers-reduced-motion:reduce){.bubble{animation:none}.marquee-track{animation:none!important}}
+/* stats */
+.stats{padding:40px 0 20px}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.stat{background:var(--soft);border-radius:24px;padding:30px 28px}
+.stat .n{font-size:clamp(40px,4.6vw,54px);font-weight:800;color:var(--ink);letter-spacing:-.04em;line-height:1}
+.stat .n small{font-size:18px;font-weight:700;color:var(--body);margin-left:4px;letter-spacing:0}
+.stat .l{margin-top:10px;font-size:15px;color:var(--body);font-weight:600}
+.stat.blue{background:var(--brand);}
+.stat.blue .n,.stat.blue .n small,.stat.blue .l{color:#fff}
+.note{font-size:13px;color:var(--muted);margin-top:14px}
+/* reviews marquee */
+.reviews{background:#fff;overflow:hidden}
+.rv-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
+.repeat{display:flex;align-items:center;gap:16px;background:var(--brand-l);border-radius:20px;padding:18px 22px}
+.repeat b{font-size:34px;font-weight:800;color:var(--brand);letter-spacing:-.03em}
+.repeat span{font-size:14px;color:var(--body);line-height:1.5}
+.marquee{position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.marquee+.marquee{margin-top:16px}
+.marquee-track{display:flex;gap:16px;width:max-content;animation:scroll 70s linear infinite}
+.marquee.rev .marquee-track{animation-direction:reverse;animation-duration:80s}
+.marquee:hover .marquee-track{animation-play-state:paused}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.rc{width:340px;flex:none;background:var(--soft);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.rc p{font-size:15px;color:var(--ink);line-height:1.65;flex:1}
+.rc .m{display:flex;align-items:center;justify-content:space-between;font-size:13px;color:var(--muted)}
+.rc .tag{font-size:12px;font-weight:700;color:var(--brand);background:#fff;border-radius:8px;padding:4px 8px}
+.rc .re{font-size:11px;font-weight:700;color:#fff;background:var(--brand);border-radius:6px;padding:2px 6px;margin-left:6px}
+.rv-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:36px}
+/* columns */
+.columns{background:var(--soft)}
+.col-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.cc{background:#fff;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px;transition:transform .2s,box-shadow .2s}
+.cc:hover{transform:translateY(-4px);box-shadow:0 20px 40px -20px rgba(25,31,40,.25)}
+.cc.feat{grid-column:span 2;background:var(--ink);color:#fff}
+.cc.feat h3{color:#fff;font-size:28px}
+.cc.feat p{color:rgba(255,255,255,.7)}
+.cc .top{display:flex;justify-content:space-between;align-items:center}
+.cc .chip{font-size:12px;font-weight:700;color:var(--brand);background:var(--brand-l);border-radius:8px;padding:5px 10px}
+.cc.feat .chip{background:rgba(255,255,255,.12);color:#9CC2F0}
+.cc .src{font-size:13px;color:var(--muted)}
+.cc h3{font-size:20px;font-weight:800;line-height:1.4}
+.cc p{font-size:15px;color:var(--body);flex:1}
+.cc .go{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:14px;color:var(--brand)}
+.cc.feat .go{color:#9CC2F0}
+.cc .go svg{width:16px;height:16px}
+.col-foot{display:flex;gap:10px;justify-content:center;margin-top:36px;flex-wrap:wrap}
+/* about */
+.about-card{display:grid;grid-template-columns:360px 1fr;gap:56px;align-items:center;background:var(--soft);border-radius:32px;padding:44px}
+.about-card .ph{border-radius:24px;overflow:hidden;aspect-ratio:4/5;background:#7d7e80}
+.about-card .ph img{width:100%;height:100%;object-fit:cover}
+.about-card h3{font-size:30px;font-weight:800}
+.about-card .role{color:var(--brand);font-weight:700;margin:4px 0 20px}
+.about-card blockquote{font-size:17px;color:var(--ink);background:#fff;border-radius:16px;padding:18px 20px;margin-bottom:22px;line-height:1.7}
+.tl{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tl li{display:flex;gap:10px;align-items:baseline;background:#fff;border-radius:12px;padding:12px 14px;font-size:15px;color:var(--ink);font-weight:600}
+.tl li span{font-size:12px;color:var(--brand);font-weight:800;min-width:30px}
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.sv{border-radius:24px;padding:32px 28px;background:var(--brand-l)}
+.sv .ic{width:48px;height:48px;border-radius:14px;background:var(--brand);color:#fff;display:grid;place-items:center;margin-bottom:20px}
+.sv .ic svg{width:24px;height:24px}
+.sv h3{font-size:22px;font-weight:800;margin-bottom:8px}
+.sv p{font-size:15px;color:var(--body)}
+.others{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;align-items:center}
+.others span{background:var(--soft);border-radius:999px;padding:10px 18px;font-weight:600;font-size:15px;color:var(--ink)}
+.others b{margin-right:6px;font-size:15px}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.step{border:1px solid var(--line);border-radius:24px;padding:30px 28px}
+.step .k{font-size:14px;font-weight:800;color:var(--brand)}
+.step h3{font-size:21px;font-weight:800;margin:10px 0 6px}
+.step p{font-size:15px;color:var(--body)}
+/* contact */
+.contact{background:var(--ink);color:#fff}
+.contact h2.t{color:#fff}
+.contact .lead{color:rgba(255,255,255,.7)}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.qlinks{display:grid;gap:10px;margin-top:32px}
+.qlinks a{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.06);border-radius:16px;padding:16px 18px;transition:background .2s}
+.qlinks a:hover{background:rgba(255,255,255,.12)}
+.qlinks .qi{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;flex:none}
+.qlinks .qi svg{width:21px;height:21px}
+.qlinks b{display:block;font-size:16px}
+.qlinks span{font-size:14px;color:rgba(255,255,255,.6)}
+.cform{background:#fff;color:var(--body);border-radius:28px;padding:36px}
+.f-title{font-size:22px;font-weight:800;color:var(--ink)}
+.f-hint{font-size:14px;color:var(--muted);margin:4px 0 22px}
+/* location */
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+.loc-card{border-radius:24px;background:var(--soft);padding:32px}
+.loc-card h3{font-size:20px;font-weight:800;margin-bottom:6px}
+.loc-card .btns{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}
+.loc-card .btns a{display:inline-flex;align-items:center;gap:6px;background:#fff;border-radius:12px;padding:11px 14px;font-weight:700;font-size:14px;color:var(--ink)}
+.loc-card .btns svg{width:16px;height:16px;color:var(--brand)}
+.kv{list-style:none}
+.kv li{display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink);font-weight:600}
+.kv li:last-child{border:0}
+.kv li span{width:70px;color:var(--muted);font-weight:500;flex:none}
+.kv a{color:var(--brand)}
+footer{background:#fff;border-top:1px solid var(--line);color:var(--muted);padding:48px 0 36px;font-size:14px}
+.f-top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.f-top img{height:34px}
+.f-links{display:flex;gap:16px;font-weight:600;color:var(--body)}
+.f-info{margin-top:22px;line-height:2}
+.f-info span{margin-right:14px;display:inline-block}
+.f-bottom{display:flex;justify-content:space-between;gap:10px;margin-top:14px;flex-wrap:wrap}
+.f-bottom button{background:none;border:0;color:var(--ink);font-weight:700;cursor:pointer;font-size:14px}
+@media (max-width:1024px){.b1{left:-30px}.b2{right:-20px}.col-grid,.svc-grid{grid-template-columns:1fr 1fr}.cc.feat{grid-column:span 2}}
+@media (max-width:860px){
+  .hero{padding:110px 0 60px}
+  .hero-grid{grid-template-columns:1fr;gap:56px}
+  .hero-vis{max-width:340px}
+  .b1{left:-14px;top:50%}.b2{right:-14px;top:76%}
+  .bubble{max-width:200px;font-size:13px}
+  .stat-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .stat{padding:22px 20px;border-radius:20px}
+  section.pad{padding:80px 0}
+  .rc{width:290px}
+  .about-card{grid-template-columns:1fr;padding:24px;gap:28px;border-radius:24px}
+  .about-card .ph{max-width:280px}
+  .tl{grid-template-columns:1fr}
+  .steps,.contact-grid,.loc{grid-template-columns:1fr}
+  .cform{padding:26px 20px;border-radius:22px}
+}
+@media (max-width:560px){.col-grid,.svc-grid{grid-template-columns:1fr}.cc.feat{grid-column:auto}.cc.feat h3{font-size:22px}}
+
+</style>
+</head>
+<body>
+
+<header id="hdr"><div class="wrap nav">
+  <a href="#top" class="logo"><img src="logo.svg" alt="함택스세무회계" width="134" height="36"></a>
+  <nav><ul class="menu" id="menu"><li><a href="#reviews">고객 후기</a></li>
+        <li><a href="#columns">칼럼</a></li>
+        <li><a href="#about">대표세무사</a></li>
+        <li><a href="#services">업무분야</a></li>
+        <li><a href="#location">오시는 길</a></li>
+        <li><a href="#contact" class="btn btn-primary">상담 신청</a></li></ul></nav>
+  <button class="burger" id="burger" aria-label="메뉴 열기" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap hero-grid">
+  <div class="rv">
+    <a class="badge" href="https://kmong.com/@%ED%95%A8%EC%84%9D%ED%99%98%EC%84%B8%EB%AC%B4%EC%82%AC" target="_blank" rel="noopener"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span> <span>크몽 평점 <b>4.9</b> · 리뷰 <b>436</b>건</span></a>
+    <h1>양도·증여·상속세,<br><span class="hl">대표세무사</span>에게<br>바로 물어보세요</h1>
+    <p class="sub">강남 함택스세무회계. 상담부터 신고까지 대표세무사가 직접 맡고, 원하시면 근거 법령과 예규까지 함께 드립니다.</p>
+    <div class="cta">
+      <a href="#contact" class="btn btn-primary">상담 문의 남기기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="tel:01050996351" class="btn btn-soft"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg> 전화 상담</a>
+    </div>
+  </div>
+  <div class="hero-vis rv">
+    <div class="ph"><img src="profile.jpg" alt="함택스세무회계 대표세무사 함석환" width="800" height="1000"></div>
+    <div class="namecard"><span>대표세무사</span><b>함석환</b></div>
+    <div class="bubble b1"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><br>관련 법 조항까지 첨부하여 신뢰도가 높았습니다.<small>크몽 · 러쉬＊＊＊</small></div>
+    <div class="bubble b2"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><br>세무사님은 "젠틀"하시고 "친절"하시며, "경청"을 잘해주십니다.<small>크몽 · 톡톡＊＊＊</small></div>
+    <div class="bubble b3"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><br>생애 첫 부동산 매도에 따른 양도세 때문에 걱정이 많았는데 많은 도움 되었습니다.<small>크몽 · 아름＊＊＊</small></div>
+  </div>
+</div></section>
+
+<section class="stats"><div class="wrap">
+  <div class="stat-grid"><div class="stat rv blue"><div class="n"><span data-count="436">436</span><small>건</small></div><div class="l">크몽 누적 리뷰</div></div><div class="stat rv"><div class="n"><span data-count="4.9">4.9</span><small>/5</small></div><div class="l">크몽 평균 평점</div></div><div class="stat rv"><div class="n"><span data-count="866">866</span><small>건</small></div><div class="l">크몽 누적 작업</div></div><div class="stat rv"><div class="n"><span data-count="2">2</span><small>시간 이내</small></div><div class="l">평균 응답 시간</div></div></div>
+  <p class="note">크몽 공개 프로필 기준 (2026.11.14 확인). 리뷰 수·평점·작업 수·응답 시간은 크몽이 집계해 표시하는 수치입니다.</p>
+</div></section>
+
+<section class="pad reviews" id="reviews">
+  <div class="wrap rv-top rv">
+    <div><span class="eyebrow">고객 후기</span><h2 class="t">숫자보다 정확한<br>고객의 목소리</h2><p class="lead">크몽에 남겨진 실제 후기를 그대로 옮겼습니다.</p></div>
+    <div class="repeat"><b>69</b><span>재구매 고객 후기<br><small style="color:var(--muted)">양도·증여 상담 리뷰 291건 중</small></span></div>
+  </div>
+  <div class="marquee"><div class="marquee-track"><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>임대사업자가 자동말소된 후 최근 고가의 아파트를 매매를 하게 되었습니다. … 함석환 세무사님이 정말 빠짐없이 꼼꼼히 챙겨주셨고요. 소득세법 시행령, 부칙, 예규에 근거한 탄탄한 법리적 해석과 만족스러운 소견서로 이 혜택을 모두 잘 받을 수 있게 도와주셨습니다.</p>
+      <div class="m"><span>보송＊＊＊ · 2026.09.08</span><span class="tag">양도·증여 상담</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>결론부터 말하면 &quot;매우 추천&quot;입니다. (사실 댓글/후기 잘 남기지 않는 성격임) … 세무사님은 &quot;젠틀&quot;하시고 &quot;친절&quot;하시며, &quot;경청&quot;을 잘해주십니다. 물론 전문성도 있으시구요!</p>
+      <div class="m"><span>톡톡＊＊＊ · 2026.03.27</span><span class="tag">양도·증여 상담</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>제가 생각하지 못한 디테일도 찝어주셨고 관련 법 조항까지 첨부하여 신뢰도가 높았습니다. 제가 의사결정하는데 큰 도움이 되었습니다.</p>
+      <div class="m"><span>러쉬＊＊＊ · 2024.07.31</span><span class="tag">양도·증여 상담</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>공동명의 취득 관련해서 궁금한 점이 많았는데, 통화하면서 하나씩 꼼꼼하게 확인해주셨습니다. 서류 준비 방향까지 실무적으로 짚어주셔서 정리하는 데 큰 도움이 됐어요.</p>
+      <div class="m"><span>봉쥬＊＊＊ · 2026.07.28</span><span class="tag">양도·증여 상담</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>주택자금조달계획서 작성에 큰 도움 주셨어요. 저같은 일반인이면 모르고 넘어갔을법한 부분도 캐치해주셔서 전문가에게 조언듣길 잘했다 싶었습니다.</p>
+      <div class="m"><span>그의＊＊＊ · 2025.10.03</span><span class="tag">양도·증여 상담</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>빠른 답변과 함께 판단시 고려해야할 리스크를 같이 알려주셔서 판단에 도움이 되었습니다. 최초 답변 외에도 추가적 질의사항에도 빠른의견 주셔서 많은 도움되었습니다.</p>
+      <div class="m"><span>압도＊＊＊ · 2024.11.11</span><span class="tag">양도·증여 상담</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>처음 개인 사업자를 내고 맞이하는 부가가치세 신고였는데 궁금한 부분 명쾌히 답변해주시고, 이래저래 문제 없이 빠르게 처리해주셨어요.</p>
+      <div class="m"><span>스튜＊＊＊ · 2026.07.20</span><span class="tag">부가세 신고</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>제건이 좀 복잡했는데, 친절히 여려가지 방법을 제시해주셔 정말 감사했어요. … 이번이 두번째 문의드리는것인데 또 요청드릴 것 같아요!ㅎㅎ</p>
+      <div class="m"><span>pe＊＊＊<span class="re">재구매</span> · 2026.04.16</span><span class="tag">양도·증여 상담</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>임대사업자가 자동말소된 후 최근 고가의 아파트를 매매를 하게 되었습니다. … 함석환 세무사님이 정말 빠짐없이 꼼꼼히 챙겨주셨고요. 소득세법 시행령, 부칙, 예규에 근거한 탄탄한 법리적 해석과 만족스러운 소견서로 이 혜택을 모두 잘 받을 수 있게 도와주셨습니다.</p>
+      <div class="m"><span>보송＊＊＊ · 2026.09.08</span><span class="tag">양도·증여 상담</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>결론부터 말하면 &quot;매우 추천&quot;입니다. (사실 댓글/후기 잘 남기지 않는 성격임) … 세무사님은 &quot;젠틀&quot;하시고 &quot;친절&quot;하시며, &quot;경청&quot;을 잘해주십니다. 물론 전문성도 있으시구요!</p>
+      <div class="m"><span>톡톡＊＊＊ · 2026.03.27</span><span class="tag">양도·증여 상담</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>제가 생각하지 못한 디테일도 찝어주셨고 관련 법 조항까지 첨부하여 신뢰도가 높았습니다. 제가 의사결정하는데 큰 도움이 되었습니다.</p>
+      <div class="m"><span>러쉬＊＊＊ · 2024.07.31</span><span class="tag">양도·증여 상담</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>공동명의 취득 관련해서 궁금한 점이 많았는데, 통화하면서 하나씩 꼼꼼하게 확인해주셨습니다. 서류 준비 방향까지 실무적으로 짚어주셔서 정리하는 데 큰 도움이 됐어요.</p>
+      <div class="m"><span>봉쥬＊＊＊ · 2026.07.28</span><span class="tag">양도·증여 상담</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>주택자금조달계획서 작성에 큰 도움 주셨어요. 저같은 일반인이면 모르고 넘어갔을법한 부분도 캐치해주셔서 전문가에게 조언듣길 잘했다 싶었습니다.</p>
+      <div class="m"><span>그의＊＊＊ · 2025.10.03</span><span class="tag">양도·증여 상담</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>빠른 답변과 함께 판단시 고려해야할 리스크를 같이 알려주셔서 판단에 도움이 되었습니다. 최초 답변 외에도 추가적 질의사항에도 빠른의견 주셔서 많은 도움되었습니다.</p>
+      <div class="m"><span>압도＊＊＊ · 2024.11.11</span><span class="tag">양도·증여 상담</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>처음 개인 사업자를 내고 맞이하는 부가가치세 신고였는데 궁금한 부분 명쾌히 답변해주시고, 이래저래 문제 없이 빠르게 처리해주셨어요.</p>
+      <div class="m"><span>스튜＊＊＊ · 2026.07.20</span><span class="tag">부가세 신고</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>제건이 좀 복잡했는데, 친절히 여려가지 방법을 제시해주셔 정말 감사했어요. … 이번이 두번째 문의드리는것인데 또 요청드릴 것 같아요!ㅎㅎ</p>
+      <div class="m"><span>pe＊＊＊<span class="re">재구매</span> · 2026.04.16</span><span class="tag">양도·증여 상담</span></div></div></div></div>
+  <div class="marquee rev"><div class="marquee-track"><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>질문이 조금 많았을 수도 있는데 너무 자세하고 친절히 정확하게 예상 세액까지 잘 산출해 주셔서 궁금증이 대부분 해결되었습니다!! 다음 양도/상속 플랜이 필요하면 다시 의뢰하겠습니다</p>
+      <div class="m"><span>호감＊＊＊ · 2024.12.31</span><span class="tag">양도·증여 상담</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>부가세 예정신고를 못해서 마감일에 급하게 도움을 받았습니다. 긴급한 상황에서도 친절하고 차분하게 대응해주시고 깔끔하게 마무리까지 해주심에 감사드립니다.</p>
+      <div class="m"><span>jj＊＊＊ · 2026.04.27</span><span class="tag">부가세 신고</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>생애 첫 부동산 매도에 따른 양도세 때문에 걱정이 많았는데 많은 도움 되었습니다.</p>
+      <div class="m"><span>아름＊＊＊<span class="re">재구매</span> · 2026.06.15</span><span class="tag">양도·증여 상담</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>혼자 유튜브랑 블로그들 보면서 머리아프게 걱정했는데 세무에 대한 명쾌한 답을 주셔서 감사합니다</p>
+      <div class="m"><span>be＊＊＊ · 2025.07.22</span><span class="tag">양도·증여 상담</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>어제 밤에 급하게 요청 드렸는데 하루도 안되서 해결해 주셨어요. 덕분에 초보자 입장에서 궁금한것도 질문 드렸는데 자세하게 설명해 주셨어요.</p>
+      <div class="m"><span>겸손＊＊＊ · 2025.07.24</span><span class="tag">부가세 신고</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>세무사님이 아니라면 모르는 자료들과 지식을 바탕으로 친절하게 설명해주셔서 감사합니다. 이번 상담을 이 후로 앞으로의 모든 세무 대행은 함석환세무사님께 맡기려고합니다.</p>
+      <div class="m"><span>Lo＊＊＊ · 2025.09.03</span><span class="tag">양도·증여 상담</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>… 이번 새로운 세무사님 과 부가세신고를 하였는데 셀프 신고 보다 훨씬 편하고 모르는 세무 관련 하여서도 상담 해 주셔서 좋았습니다.</p>
+      <div class="m"><span>단발＊＊＊<span class="re">재구매</span> · 2025.07.24</span><span class="tag">부가세 신고</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>급한 상황이었는데 신속하게 진행해주셨어요~ 이해가 어렵고 모르는 부분도 질문에 자세히 답해주셨어요 감사합니다^^</p>
+      <div class="m"><span>에이＊＊＊<span class="re">재구매</span> · 2026.01.27</span><span class="tag">부가세 신고</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>질문이 조금 많았을 수도 있는데 너무 자세하고 친절히 정확하게 예상 세액까지 잘 산출해 주셔서 궁금증이 대부분 해결되었습니다!! 다음 양도/상속 플랜이 필요하면 다시 의뢰하겠습니다</p>
+      <div class="m"><span>호감＊＊＊ · 2024.12.31</span><span class="tag">양도·증여 상담</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>부가세 예정신고를 못해서 마감일에 급하게 도움을 받았습니다. 긴급한 상황에서도 친절하고 차분하게 대응해주시고 깔끔하게 마무리까지 해주심에 감사드립니다.</p>
+      <div class="m"><span>jj＊＊＊ · 2026.04.27</span><span class="tag">부가세 신고</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>생애 첫 부동산 매도에 따른 양도세 때문에 걱정이 많았는데 많은 도움 되었습니다.</p>
+      <div class="m"><span>아름＊＊＊<span class="re">재구매</span> · 2026.06.15</span><span class="tag">양도·증여 상담</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>혼자 유튜브랑 블로그들 보면서 머리아프게 걱정했는데 세무에 대한 명쾌한 답을 주셔서 감사합니다</p>
+      <div class="m"><span>be＊＊＊ · 2025.07.22</span><span class="tag">양도·증여 상담</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>어제 밤에 급하게 요청 드렸는데 하루도 안되서 해결해 주셨어요. 덕분에 초보자 입장에서 궁금한것도 질문 드렸는데 자세하게 설명해 주셨어요.</p>
+      <div class="m"><span>겸손＊＊＊ · 2025.07.24</span><span class="tag">부가세 신고</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>세무사님이 아니라면 모르는 자료들과 지식을 바탕으로 친절하게 설명해주셔서 감사합니다. 이번 상담을 이 후로 앞으로의 모든 세무 대행은 함석환세무사님께 맡기려고합니다.</p>
+      <div class="m"><span>Lo＊＊＊ · 2025.09.03</span><span class="tag">양도·증여 상담</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>… 이번 새로운 세무사님 과 부가세신고를 하였는데 셀프 신고 보다 훨씬 편하고 모르는 세무 관련 하여서도 상담 해 주셔서 좋았습니다.</p>
+      <div class="m"><span>단발＊＊＊<span class="re">재구매</span> · 2025.07.24</span><span class="tag">부가세 신고</span></div></div><div class="rc"><span class="stars" aria-label="별점 5점"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><p>급한 상황이었는데 신속하게 진행해주셨어요~ 이해가 어렵고 모르는 부분도 질문에 자세히 답해주셨어요 감사합니다^^</p>
+      <div class="m"><span>에이＊＊＊<span class="re">재구매</span> · 2026.01.27</span><span class="tag">부가세 신고</span></div></div></div></div>
+  <div class="wrap rv-foot"><p class="note" style="margin:0">크몽에 등록된 실제 후기를 옮겼습니다. 긴 후기는 일부 중략(…)했고, 닉네임은 일부만 표시합니다. 양도·증여 상담 상품 리뷰 291건 중 69건이 ‘재구매 고객’ 후기입니다 (크몽 표시 기준, 2026.11.14).</p>
+    <a href="https://kmong.com/@%ED%95%A8%EC%84%9D%ED%99%98%EC%84%B8%EB%AC%B4%EC%82%AC" target="_blank" rel="noopener" class="btn btn-soft">크몽에서 전체 후기 보기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</section>
+
+<section class="pad columns" id="columns"><div class="wrap">
+  <div class="center rv"><span class="eyebrow">칼럼</span><h2 class="t">세법이 바뀌면,<br>칼럼으로 먼저 정리합니다</h2>
+    <p class="lead">서울경제 오피니언 「택스 리얼리티」 연재와 블로그에서 부동산 세금 이야기를 꾸준히 쓰고 있습니다.</p></div>
+  <div class="col-grid"><a class="cc rv feat" href="https://www.sedaily.com/article/20094091" target="_blank" rel="noopener">
+      <div class="top"><span class="chip">1주택자</span><span class="src">2026.09.22</span></div>
+      <h3>달라지는 1주택자 절세법</h3><p>2026년 세제개편안의 장기보유특별공제 개편이 오래 보유한 1세대 1주택자에게 어떤 영향을 주는지 정리했습니다.</p>
+      <span class="go">서울경제 · 택스 리얼리티 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a><a class="cc rv" href="https://www.sedaily.com/article/20083012" target="_blank" rel="noopener">
+      <div class="top"><span class="chip">임대사업자</span><span class="src">2026.08.25</span></div>
+      <h3>세제 혜택 줄어드는 임대아파트…매도 시점 따져야</h3><p>자동 말소가 몰리는 등록임대 아파트의 세제 혜택과, 개정안 이후 매도 시점을 어떻게 판단할지 다뤘습니다.</p>
+      <span class="go">서울경제 · 택스 리얼리티 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a><a class="cc rv" href="https://www.sedaily.com/article/20073773" target="_blank" rel="noopener">
+      <div class="top"><span class="chip">증여·취득세</span><span class="src">2026.07.30</span></div>
+      <h3>가족 간 부동산 이전, ‘취득세’ 복병</h3><p>증여·부담부증여·저가 양수도를 비교할 때 놓치기 쉬운 취득세 부담을 짚었습니다.</p>
+      <span class="go">서울경제 · 택스 리얼리티 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a><a class="cc rv" href="https://www.sedaily.com/article/20060169" target="_blank" rel="noopener">
+      <div class="top"><span class="chip">양도세</span><span class="src">2026.06.25</span></div>
+      <h3>다주택 양도세 중과…세금 갈리는 ‘경우의 수’</h3><p>다시 시작된 다주택자 양도세 중과로 같은 양도차익에도 세금이 얼마나 달라지는지 사례로 비교했습니다.</p>
+      <span class="go">서울경제 · 택스 리얼리티 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a><a class="cc rv" href="https://blog.naver.com/hamstax/224459074332" target="_blank" rel="noopener">
+      <div class="top"><span class="chip">사무소 소개</span><span class="src">2026.10.30</span></div>
+      <h3>세금만 보지 않는 세무사, 함택스세무회계 함석환 대표</h3><p>대표세무사가 직접 소개하는 함택스세무회계와 상담 방식.</p>
+      <span class="go">네이버 블로그 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div>
+  <div class="col-foot">
+    <a href="https://www.sedaily.com/opinion/sedIn/series/S010303815" target="_blank" rel="noopener" class="btn btn-primary">서울경제 연재 전체 보기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+    <a href="https://blog.naver.com/hamstax" target="_blank" rel="noopener" class="btn btn-soft">블로그 칼럼 보기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+  </div>
+</div></section>
+
+<section class="pad" id="about"><div class="wrap">
+  <div class="about-card rv">
+    <div class="ph"><img src="profile.jpg" alt="대표세무사 함석환" loading="lazy" width="800" height="1000"></div>
+    <div>
+      <span class="eyebrow">대표세무사</span>
+      <h3>함석환</h3><p class="role">함택스세무회계 대표세무사</p>
+      <blockquote>“인터넷의 잘못된 정보나 개정 전 법령 때문에 잠 못 드시는 분이 많습니다. 정확한 상담 받으시고 발 뻗고 주무시길 바랍니다.”</blockquote>
+      <ul class="tl"><li><span>현재</span>함택스세무회계 대표세무사</li><li><span>현재</span>서울경제 「택스 리얼리티」 칼럼 연재</li><li><span></span>강남구청 재산제세 상담위원</li><li><span></span>현대위아 · 이노션 세무자문</li><li><span>2022</span>와이제이택스라운지 세무사</li><li><span>2021</span>세무사 자격 취득</li><li><span>2021</span>동양생명보험 재무회계팀</li><li><span></span>고려대학교 졸업</li><li><span></span>안산동산고등학교 졸업</li></ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="pad" id="services" style="padding-top:0"><div class="wrap">
+  <div class="rv"><span class="eyebrow">업무분야</span><h2 class="t">부동산 세금이 주력입니다</h2>
+    <p class="lead">개인·법인사업자의 기장과 신고도 함께 맡습니다.</p></div>
+  <div class="svc-grid"><div class="sv rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V21H3z"/><path d="M9 21v-7h6v7"/></svg></div><h3>양도소득세</h3><p>다주택 중과, 일시적 2주택, 분양권·입주권, 상가·토지까지 매도 전에 세액과 비과세 여부를 검토합니다.</p></div><div class="sv rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9.5" r="2.5"/><path d="M16 14.6a5 5 0 0 1 5.5 5.4"/></svg></div><h3>상속 · 증여세</h3><p>부담부증여, 저가 양수도, 사전 증여 등 가족 간 재산 이전 방식을 세목별로 비교해 드립니다.</p></div><div class="sv rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div><h3>자금조달계획서</h3><p>주택 취득 시 필요한 자금조달계획서 작성과 가족 간 자금 이체·차용증 문제를 함께 봅니다.</p></div></div>
+  <div class="others rv"><b>그 밖의 업무</b><span>기장 대리</span><span>세무 신고 대행</span><span>법인전환</span><span>법인설립</span><span>비상장주식평가</span><span>경정청구</span><span>세무조사 대응</span></div>
+  <div class="steps">
+    <div class="step rv"><span class="k">STEP 1</span><h3>문의 남기기</h3><p>상담 신청서, 전화, 카카오톡 중 편한 방법으로 상황을 알려주세요.</p></div>
+    <div class="step rv"><span class="k">STEP 2</span><h3>대표세무사 직접 연락</h3><p>내용을 확인한 뒤 희망하신 시간에 맞춰 대표세무사가 직접 연락드립니다.</p></div>
+    <div class="step rv"><span class="k">STEP 3</span><h3>검토 · 진행</h3><p>필요한 자료를 안내하고, 세액 검토와 신고까지 진행 상황을 공유합니다.</p></div>
+  </div>
+</div></section>
+
+<section class="pad contact" id="contact"><div class="wrap contact-grid">
+  <div class="rv">
+    <span class="eyebrow" style="color:#9CC2F0">상담 신청</span>
+    <h2 class="t">지금 상황만<br>알려주세요</h2>
+    <p class="lead">상담 가능한 일자와 시간을 남겨주시면 대표세무사가 직접 연락드립니다.</p>
+    <div class="qlinks">
+      <a href="tel:01050996351"><span class="qi" style="background:var(--brand);color:#fff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><div><b>전화 상담</b><span>010-5099-6351</span></div></a>
+      <a href="https://pf.kakao.com/_CzTxan/friend" target="_blank" rel="noopener"><span class="qi" style="background:#FEE500;color:#191919"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7l-1 3.6c-.1.3.3.6.6.4l4.2-2.8c.5.1 1 .1 1.5.1 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg></span><div><b>카카오톡 채널</b><span>채널 추가 후 메시지로 문의</span></div></a>
+      <a href="mailto:hamstax@naver.com"><span class="qi" style="background:rgba(255,255,255,.12);color:#fff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span><div><b>이메일</b><span>hamstax@naver.com</span></div></a>
+    </div>
+  </div>
+  <div class="rv"><form class="cform" id="form" novalidate>
+  <h3 class="f-title">온라인 상담 신청서</h3>
+  <p class="f-hint"><b style="color:var(--brand)">*</b> 표시는 필수 항목입니다. 확인 후 대표세무사가 직접 연락드립니다.</p>
+  <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <div class="frow">
+    <div class="field"><label for="f-name">이름<i>*</i></label><input id="f-name" name="이름" autocomplete="name" placeholder="홍길동" required></div>
+    <div class="field"><label for="f-tel">연락처<i>*</i></label><input id="f-tel" name="연락처" type="tel" inputmode="tel" autocomplete="tel" placeholder="010-0000-0000" required></div>
+  </div>
+  <div class="frow">
+    <div class="field"><label for="f-date">상담 가능 일자</label><input id="f-date" name="상담 가능 일자" type="date"></div>
+    <div class="field"><label for="f-time">상담 가능 시간</label>
+      <select id="f-time" name="상담 가능 시간"><option value="시간 무관">시간 무관</option><option>10:00 ~ 12:00</option><option>12:00 ~ 14:00</option><option>14:00 ~ 16:00</option><option>16:00 ~ 19:00</option></select>
+    </div>
+  </div>
+  <div class="field"><label for="f-msg">문의사항<i>*</i></label><textarea id="f-msg" name="문의사항" placeholder="예) 2주택자인데 한 채를 팔려고 합니다. 취득 시기는 2018년, 양도 예정 시기는 내년 상반기입니다." required></textarea></div>
+  <label class="agree"><input type="checkbox" id="f-agree" required><span>개인정보 수집·이용에 동의합니다. <button type="button" data-open="privacy">내용 보기</button></span></label>
+  <button type="submit" class="btn btn-primary" id="f-submit">상담 신청하기</button>
+  <div class="msg" id="f-msg-box" role="status"></div>
+</form></div>
+</div></section>
+
+<section class="pad" id="location"><div class="wrap">
+  <div class="rv"><span class="eyebrow">오시는 길</span><h2 class="t">강남 논현로 백악빌딩 602호</h2></div>
+  <div class="loc">
+    <div class="loc-card rv"><h3>함택스세무회계</h3><p>서울 강남구 논현로79길 62, 백악빌딩 602호</p>
+      <div class="btns"><a href="https://map.naver.com/p/entry/place/1937463983" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg> 네이버 지도</a><a href="https://map.kakao.com/?q=%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%85%BC%ED%98%84%EB%A1%9C79%EA%B8%B8%2062" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg> 카카오맵</a></div></div>
+    <div class="loc-card rv"><ul class="kv">
+      <li><span>운영시간</span>10:00 ~ 19:00</li><li><span>주차</span>주차 가능</li>
+      <li><span>전화</span><a href="tel:01050996351">010-5099-6351</a></li><li><span>팩스</span>0504-284-6351</li></ul></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="f-top"><img src="logo.svg" alt="함택스세무회계" width="127" height="34">
+    <div class="f-links"><a href="https://blog.naver.com/hamstax" target="_blank" rel="noopener">블로그</a><a href="https://pf.kakao.com/_CzTxan/friend" target="_blank" rel="noopener">카카오톡</a><a href="https://kmong.com/@%ED%95%A8%EC%84%9D%ED%99%98%EC%84%B8%EB%AC%B4%EC%82%AC" target="_blank" rel="noopener">크몽</a></div></div>
+  <div class="f-info"><span>상호 함택스세무회계</span><span>대표 함석환</span><span>사업자등록번호 654-23-01649</span><span>세무사 등록번호 9102705</span><br>
+<span>서울 강남구 논현로79길 62, 백악빌딩 602호</span><br>
+<span>전화 010-5099-6351</span><span>팩스 0504-284-6351</span><span>이메일 hamstax@naver.com</span></div>
+  <div class="f-bottom"><span>© <span id="yr">2026</span> 함택스세무회계</span><button type="button" data-open="privacy">개인정보처리방침</button></div>
+</div></footer>
+<nav class="mbar" aria-label="빠른 상담">
+  <a href="tel:01050996351" class="m-tel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>전화</a>
+  <a href="https://pf.kakao.com/_CzTxan/friend" target="_blank" rel="noopener" class="m-kakao"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7l-1 3.6c-.1.3.3.6.6.4l4.2-2.8c.5.1 1 .1 1.5.1 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg>카톡</a>
+  <a href="#contact" class="m-form">상담 신청</a>
+</nav>
+<div class="modal" id="privacy" role="dialog" aria-modal="true" aria-labelledby="pv-t">
+  <div class="modal-box">
+    <h3 id="pv-t">개인정보 수집·이용 안내</h3>
+    <p>함택스세무회계는 상담 신청 응대를 위해 아래와 같이 개인정보를 수집·이용합니다.</p>
+    <h4>1. 수집 항목</h4><p>이름, 연락처, 문의사항, 상담 가능 일자 및 시간</p>
+    <h4>2. 수집·이용 목적</h4><p>상담 문의 확인 및 회신, 상담 일정 조율</p>
+    <h4>3. 보유·이용 기간</h4><p>상담 완료 후 1년간 보관 후 파기합니다. 삭제를 요청하시면 지체 없이 파기합니다.</p>
+    <h4>4. 동의 거부 권리</h4><p>동의하지 않을 수 있으며, 이 경우 온라인 상담 신청이 제한됩니다. 전화 또는 카카오톡으로 문의하실 수 있습니다.</p>
+    <h4>5. 개인정보 보호책임자</h4><p>함석환 (hamstax@naver.com / 010-5099-6351)</p>
+    <button type="button" class="btn btn-primary" data-close>확인</button>
+  </div>
+</div>
+<script>
+(function(){
+  var FORM_ENDPOINT = "https://formsubmit.co/ajax/hamstax@naver.com"; // 첫 접수 시 hamstax@naver.com 인증 메일 1회 승인 필요
+  var hdr=document.getElementById('hdr'), menu=document.getElementById('menu'), burger=document.getElementById('burger');
+  function onScroll(){ if(hdr) hdr.classList.toggle('scrolled', window.scrollY>10 || hdr.classList.contains('menu-open')); }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  if(burger){
+    burger.addEventListener('click', function(){ var o=menu.classList.toggle('open'); hdr.classList.toggle('menu-open',o); burger.setAttribute('aria-expanded',o); onScroll(); });
+    menu.addEventListener('click', function(e){ if(e.target.closest('a')){ menu.classList.remove('open'); hdr.classList.remove('menu-open'); burger.setAttribute('aria-expanded',false); onScroll(); } });
+  }
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} }); },{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  } else els.forEach(function(el){ el.classList.add('in'); });
+  // count-up
+  document.querySelectorAll('[data-count]').forEach(function(el){
+    var target=parseFloat(el.getAttribute('data-count')), dec=(el.getAttribute('data-count').split('.')[1]||'').length, done=false;
+    function run(){ if(done) return; done=true; var t0=null; function step(t){ if(!t0) t0=t; var p=Math.min(1,(t-t0)/1200); p=1-Math.pow(1-p,3); el.textContent=(target*p).toFixed(dec); if(p<1) requestAnimationFrame(step); } requestAnimationFrame(step); }
+    if('IntersectionObserver' in window){ var o=new IntersectionObserver(function(es){ if(es[0].isIntersecting){ run(); o.disconnect(); } }); o.observe(el); } else run();
+  });
+  // review filter
+  document.querySelectorAll('[data-filter]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var f=b.getAttribute('data-filter');
+      document.querySelectorAll('[data-filter]').forEach(function(x){ x.classList.toggle('on', x===b); });
+      document.querySelectorAll('[data-svc]').forEach(function(c){ c.style.display = (f==='all'||c.getAttribute('data-svc')===f)?'':'none'; });
+    });
+  });
+  var modal=document.getElementById('privacy');
+  document.querySelectorAll('[data-open="privacy"]').forEach(function(b){ b.addEventListener('click', function(){ modal.classList.add('open'); }); });
+  modal.addEventListener('click', function(e){ if(e.target===modal || e.target.hasAttribute('data-close')) modal.classList.remove('open'); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') modal.classList.remove('open'); });
+  var d=new Date(), pad=function(n){return (n<10?'0':'')+n;};
+  var fd=document.getElementById('f-date'); if(fd) fd.min=d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+  var yr=document.getElementById('yr'); if(yr) yr.textContent=d.getFullYear();
+  var tel=document.getElementById('f-tel');
+  tel.addEventListener('input', function(){ var v=tel.value.replace(/\D/g,'').slice(0,11); tel.value = v.length<4 ? v : v.length<8 ? v.slice(0,3)+'-'+v.slice(3) : v.slice(0,3)+'-'+v.slice(3,v.length-4)+'-'+v.slice(-4); });
+  var form=document.getElementById('form'), box=document.getElementById('f-msg-box'), btn=document.getElementById('f-submit');
+  function show(t,x){ box.className='msg '+t; box.textContent=x; }
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault(); var ok=true;
+    ['f-name','f-tel','f-msg'].forEach(function(id){ var el=document.getElementById(id), f=el.closest('.field'), bad=!el.value.trim()||(id==='f-tel'&&el.value.replace(/\D/g,'').length<9); f.classList.toggle('err',bad); if(bad) ok=false; });
+    if(!ok){ show('bad','이름, 연락처, 문의사항을 확인해 주세요.'); return; }
+    if(!document.getElementById('f-agree').checked){ show('bad','개인정보 수집·이용에 동의해 주세요.'); return; }
+    if(form._honey.value) return;
+    var data={}; new FormData(form).forEach(function(v,k){ if(k!=='_honey') data[k]=v; });
+    data._subject='[홈페이지 상담신청] '+data['이름']+'님'; data._template='table'; data._captcha='false';
+    btn.disabled=true; btn.textContent='접수 중...';
+    fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+      .then(function(){ form.reset(); show('ok','상담 신청이 접수되었습니다. 확인 후 대표세무사가 직접 연락드리겠습니다.'); })
+      .catch(function(){ show('bad','접수 중 문제가 생겼습니다. 번거로우시겠지만 010-5099-6351 또는 카카오톡 채널로 문의해 주세요.'); })
+      .finally(function(){ btn.disabled=false; btn.textContent='상담 신청하기'; });
+  });
+})();
+</script>
+</body>
+</html>
