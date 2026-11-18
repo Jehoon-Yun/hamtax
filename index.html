@@ -121,6 +121,11 @@ section[id],div[id]{scroll-margin-top:calc(var(--hdr-h,72px) + 12px)}
   .mbar .m-kakao{background:#FEE500;color:#191919}
   .mbar .m-form{background:var(--brand);color:#fff}
 }
+@media (min-width:700px) and (max-width:900px){
+  body{padding-bottom:92px}
+  .mbar{left:50%;right:auto;bottom:16px;transform:translateX(-50%);width:min(500px,calc(100% - 48px));border-radius:22px;padding:8px;box-shadow:0 18px 40px -16px rgba(11,27,63,.45),0 0 0 1px var(--line)}
+  .mbar a{height:48px;border-radius:15px}
+}
 @media (max-width:560px){.wrap{padding:0 20px}.frow{grid-template-columns:1fr;gap:0}.qa .qa-a{padding-right:0}}
 
 
@@ -460,42 +465,135 @@ html:not(.js) .ring .fg{stroke-dashoffset:628}
   .ct .blobs i{background:radial-gradient(circle,rgba(47,111,237,.5) 0%,rgba(47,111,237,0) 68%)!important}
   .np::before{filter:none;animation:none;width:720px;height:720px;right:-320px;top:-360px;opacity:.75;background:radial-gradient(circle,#2F6FED 0%,rgba(47,111,237,0) 66%)}
 }
-@media (max-width:900px){
-  .sec{padding:88px 0}
-  .hero{padding:34px 0 80px}
-  .hero-g{grid-template-columns:1fr;gap:60px}
-  .pw{max-width:330px}
-  .f1{left:-14px;bottom:-46px;font-size:13.5px}.f2{right:-12px;top:-42px;font-size:13.5px}
-  .msgs{height:436px}
-  .hero-g{gap:84px}
-  .say{height:220vh}
-  .feat{grid-template-columns:1fr;gap:30px;padding:44px 0}
+/* ===== 태블릿 (700~900px): PC의 2단 구성을 줄여서 유지 ===== */
+@media (min-width:700px) and (max-width:900px){
+  .wrap{padding:0 32px}
+  .sec{padding:96px 0}
+  .hero{padding:44px 0 100px}
+  .hero-g{grid-template-columns:minmax(0,1fr) 290px;gap:30px}
+  .hero h1{font-size:clamp(40px,6.1vw,54px);margin:22px 0 18px}
+  .hero .sub{font-size:17px}
+  .pw{max-width:290px}
+  .phone{border-radius:34px;padding:14px 14px 18px}
+  .msgs{height:452px}
+  .f1{left:-28px;bottom:-34px;font-size:13px}.f2{right:-8px;top:-36px;font-size:13px}
+  .say{height:210vh}
+  .feat{gap:36px;padding:52px 0}
+  .fv{border-radius:32px}
+  .pcard{width:214px;border-radius:24px}.paper{width:246px;padding:22px 20px 24px}.ring{transform:scale(.84)}
+  .np{grid-template-columns:1fr;padding:48px 40px 40px;gap:34px;border-radius:36px}
+  .np>div:first-child{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px 44px;align-items:center}
+  .np>div:first-child .dist{margin-top:0}
+  .np>div:first-child .note{grid-column:1/-1}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+  .facts div{grid-template-columns:1fr;gap:4px;border-bottom:0;border-top:1px solid rgba(255,255,255,.16);padding:20px 0}
+  .facts dt{font-size:38px}.facts dt.w{font-size:32px}
+  .rc{width:320px}
+  .cmp{padding:28px}
+  .tabs button{padding:13px 18px;font-size:16px}
+  .cg{grid-template-columns:1fr 1fr}
+  .cc.top{grid-column:1/-1;grid-row:auto;min-height:430px;padding:38px}
+  .cc.top .no{font-size:300px}
+  .ab-g{grid-template-columns:232px minmax(0,1fr);gap:36px;align-items:start}
+  .ab-ph{position:sticky;top:96px}
+  .cv{grid-template-columns:1fr}
+  .steps{gap:12px}
+  .steps li{padding:24px 20px 26px;border-radius:24px}
+  .steps li::before{width:46px;height:46px;border-radius:15px;font-size:20px;margin-bottom:18px}
+  .steps h3{font-size:19px}.steps p{font-size:14.5px}
+  .faq-g{grid-template-columns:1fr;gap:28px;margin-top:96px}
+  .ct-g{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 28px}
+  .ct-g>div:first-child{display:contents}
+  .ct-g .h2,.ct-g .lead,.ct-g .ql{grid-column:1}
+  .ct-g .map{grid-column:2;grid-row:1/span 3;margin-top:6px;align-self:start}
+  .ct-g>div:last-child{grid-column:1/-1;margin-top:40px}
+  .cform{padding:32px 30px}
+}
+/* ===== 휴대폰 (699px 이하) ===== */
+@media (max-width:699px){
+  .sec{padding:72px 0}
+  .h2{font-size:clamp(30px,8.6vw,40px)}
+  .lead{font-size:17px;margin-top:14px}
+  .hero{padding:24px 0 64px}
+  .hero-g{grid-template-columns:1fr;gap:30px}
+  .hero h1{font-size:clamp(38px,11.4vw,54px);line-height:1.16;margin:20px 0 16px}
+  .hero .sub{font-size:17px}
+  .cta{display:grid!important;grid-template-columns:1fr 1fr;gap:10px}
+  .cta .btn{width:100%;padding:0 10px;font-size:15.5px}
+  /* 떠 있던 배지 2개는 휴대폰에서 전화 화면 위에 나란히 놓는다 */
+  .pw{max-width:none;display:grid;grid-template-columns:1fr 1fr;gap:10px;transform:none}
+  .pw>div:first-child{grid-column:1/-1;order:2;width:100%;max-width:400px;justify-self:center}
+  .fl{position:static;white-space:normal;font-size:14.5px;padding:14px 16px;border-radius:18px;box-shadow:0 0 0 1px var(--line),0 16px 30px -22px rgba(11,27,63,.45)}
+  .fl>div{animation:none}
+  .msgs{height:406px}
+  .say{height:175vh}
+  .say .lit{font-size:clamp(27px,7.7vw,34px)}
+  .feat{grid-template-columns:1fr;gap:22px;padding:34px 0}
   .feat:nth-child(even) .fv{order:0}
-  .fv{max-width:360px;border-radius:32px}
-  .np{grid-template-columns:1fr;padding:44px 26px;border-radius:32px}
-  .facts div{grid-template-columns:130px 1fr}.facts dt{font-size:34px}.facts dt.w{font-size:27px}
-  .rv{padding-bottom:88px}
-  .rc{width:300px}
-  .cmp{padding:22px 20px;border-radius:26px}
+  .fv{max-width:none;aspect-ratio:1/.8;border-radius:28px}
+  .pcard{width:190px;padding:10px 10px 14px;border-radius:22px}
+  .pcard span{font-size:12px;white-space:nowrap}
+  .pcard .im{border-radius:14px;aspect-ratio:1/.92}
+  .paper{width:250px;padding:20px 20px 22px}
+  .ring{transform:scale(.8)}
+  .feat h2{font-size:clamp(27px,7.6vw,34px)}
+  .feat p{font-size:17px;margin-top:12px}
+  .np{grid-template-columns:1fr;padding:38px 22px 30px;border-radius:28px;gap:30px}
+  .big b{font-size:clamp(104px,30vw,124px)}
+  .dist{margin-top:30px}
+  .facts div{grid-template-columns:118px 1fr;padding:18px 0}.facts dt{font-size:32px}.facts dt.w{font-size:25px}
+  .rv{padding-bottom:72px}
+  .rc{width:308px;padding-left:22px;padding-right:22px}
+  .rc footer{font-size:12.5px;white-space:nowrap}
+  .cmp{padding:22px 20px;border-radius:26px;margin-top:32px}
   .cmp-chips button{padding:10px 14px;font-size:15px}
   .cmp-foot .btn{width:100%}
-  .tabs{margin-top:48px}
-  .tabs button{padding:12px 13px;font-size:15.5px}
+  .tabs{margin-top:44px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:2px;margin-right:-20px;padding-right:20px}
+  .tabs::-webkit-scrollbar{display:none}
+  .tabs button{flex:none;padding:12px 15px;font-size:15.5px;white-space:nowrap}
   .panel{padding:22px 20px;border-radius:0 22px 22px 22px}
   .tlist{grid-template-columns:1fr}
-  .cg{grid-template-columns:1fr}
-  .cc.top{grid-column:auto;grid-row:auto;padding:30px 26px;min-height:470px}
+  .cg{grid-template-columns:1fr;gap:12px;margin-top:36px}
+  .cc{min-height:0;padding:26px 24px;border-radius:24px}
+  .cc.top{grid-column:auto;grid-row:auto;padding:28px 24px;min-height:450px;border-radius:28px}
   .cc.top .no{font-size:210px;right:14px;top:150px}
+  .cc.top h3{font-size:clamp(30px,8.6vw,38px)}
   .tl li{font-size:11.5px}
-  .cc{min-height:0}
-  .ab-g,.ct-g,.faq-g{grid-template-columns:1fr;gap:40px}
-  .ab-ph{max-width:280px}
+  .ab-g{grid-template-columns:1fr;gap:26px}
+  .ab-ph{max-width:none;aspect-ratio:1/1.04;border-radius:28px}
   .cv{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr;gap:12px;margin-top:36px}
-  .faq-g{margin-top:80px}
+  .steps{grid-template-columns:1fr;gap:10px;margin-top:30px}
+  .steps li{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px;padding:20px 20px 22px;border-radius:22px}
+  .steps li::before{width:44px;height:44px;border-radius:14px;font-size:19px;margin:0;grid-row:1/span 2}
+  .steps h3,.steps p{grid-column:2}
+  .steps h3{font-size:18.5px;margin:1px 0 4px}.steps p{font-size:15px}
+  .faq-g{grid-template-columns:1fr;gap:22px;margin-top:72px}
+  /* 문의: 연락 수단 → 신청서 → 지도 순서 */
+  .ct-g{grid-template-columns:1fr;gap:0}
+  .ct-g>div:first-child{display:contents}
+  .ct-g>div:last-child{order:4;margin-top:28px}
+  .ct-g .map{order:5;margin-top:22px}
+  .ql{margin-top:26px}
   .cform{padding:26px 20px;border-radius:24px}
+  .site-f{padding:40px 0 30px}
 }
-@media (max-width:420px){.tabs button{padding:11px 9px;font-size:14.5px}.facts div{grid-template-columns:1fr;gap:2px}}
+/* 큰 휴대폰·작은 태블릿 (520~699px): 한 줄 구성은 유지하되 큰 덩어리를 줄인다 */
+@media (min-width:520px) and (max-width:699px){
+  .wrap{padding:0 28px}
+  .cta{grid-template-columns:auto auto;justify-content:start}
+  .cta .btn{padding:0 24px}
+  .pw{max-width:440px}
+  .fv{aspect-ratio:1/.56}
+  .pcard{width:176px}
+  .ab-ph{max-width:340px}
+  .cg{grid-template-columns:1fr 1fr}
+  .cc.top{grid-column:1/-1}
+  .steps li{padding:22px 24px}
+  .cform{padding:30px 28px}
+}
+@media (max-width:420px){.facts div{grid-template-columns:1fr;gap:2px}}
+@media (max-width:389px){.msgs{height:480px}}
+@media (max-width:349px){.msgs{height:504px}.hero h1{font-size:36px}}
 
 </style>
 </head>
@@ -730,7 +828,7 @@ html:not(.js) .ring .fg{stroke-dashoffset:628}
     </div>
     <div class="map" data-rv>
       <iframe class="kmapf" src="map.html" title="함택스세무회계 위치 지도" loading="lazy" height="376"></iframe><script>addEventListener("message",function(e){var f=document.querySelector(".kmapf");if(f&&e.source===f.contentWindow&&e.data&&e.data.kmapH>200&&e.data.kmapH<700)f.style.height=e.data.kmapH+"px"});</script>
-      <div class="map-b"><b>서울 강남구 논현로79길 62, 백악빌딩 602호</b>운영시간 10:00 ~ 19:00, 주차 가능 · 팩스 0504-284-6351
+      <div class="map-b"><b>서울 강남구 논현로79길 62, 백악빌딩 602호</b>운영시간 10:00 ~ 19:00, 주차 가능<br>팩스 0504-284-6351
         <div class="map-l"><a href="https://map.naver.com/p/entry/place/1937463983" target="_blank" rel="noopener">네이버 지도에서 보기</a></div></div>
     </div>
   </div>
