@@ -350,7 +350,14 @@ html:not(.js) .ring .fg{stroke-dashoffset:628}
 .cc{position:relative;background:var(--soft);border-radius:28px;padding:30px;display:flex;flex-direction:column;gap:12px;min-height:270px;transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;overflow:hidden}
 .cc:hover{box-shadow:0 30px 60px -30px rgba(11,27,63,.45)}
 .cc.feat{grid-column:span 2;grid-row:span 2;background:linear-gradient(150deg,#0B1B3F,#1E3A8A);color:#fff;padding:44px;--spot:rgba(127,176,255,.3)}
-.cc .m2{font-size:13.5px;color:var(--muted);font-weight:700;display:flex;gap:10px;flex-wrap:wrap}
+.cc .m2{font-size:13.5px;color:var(--muted);font-weight:700;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.sd{flex:none;border-radius:6px;background:#fff;box-shadow:0 0 0 1px var(--line)}
+.cc .m2 .sd{width:22px;height:22px;margin-right:-2px}
+.cc.feat .m2 .sd{width:28px;height:28px;border-radius:8px;box-shadow:none}
+.pub{display:inline-flex;align-items:center;gap:10px;margin-top:22px;background:#fff;border-radius:999px;padding:8px 18px 8px 8px;font-size:15px;font-weight:700;color:var(--ink);box-shadow:0 10px 30px -14px rgba(11,27,63,.35),0 0 0 1px var(--line);transition:transform .25s}
+.pub:hover{transform:translateY(-2px)}
+.pub .sd{width:30px;height:30px;border-radius:50%}
+.pub span{color:var(--muted);font-weight:600}
 .cc .m2 b{color:var(--brand)}
 .cc.feat .m2,.cc.feat .m2 b{color:#A9CCFF}
 .cc h3{font-size:22px;line-height:1.38}
@@ -396,15 +403,27 @@ html:not(.js) .ring .fg{stroke-dashoffset:628}
 .loc{margin-top:26px;padding-top:22px;border-top:1px solid rgba(255,255,255,.16);font-size:15px;color:rgba(255,255,255,.78);line-height:1.8}
 .loc b{color:#fff}
 .loc a{color:#A9CCFF;font-weight:700;margin-right:14px}
+.map{margin-top:26px;border-radius:22px;overflow:hidden;background:rgba(255,255,255,.08);box-shadow:0 0 0 1px rgba(255,255,255,.14)}
+.map iframe{display:block;width:100%;height:240px;border:0;background:#DCE5F3}
+.map-b{padding:18px 20px 20px;font-size:15px;color:rgba(255,255,255,.78);line-height:1.7}
+.map-b b{display:block;color:#fff;font-size:16.5px}
+.map-l{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.map-l a{padding:8px 15px;border-radius:999px;background:rgba(255,255,255,.12);color:#fff;font-weight:700;font-size:14px;transition:background .2s}
+.map-l a:hover{background:rgba(255,255,255,.22)}
 .cform{background:#fff;color:var(--body);border-radius:32px;padding:38px;box-shadow:0 60px 120px -50px rgba(47,111,237,.9)}
 .f-title{font-size:24px}
 .f-hint{font-size:14.5px;color:var(--muted);margin:4px 0 24px}
 /* footer */
 .site-f{border-top:1px solid var(--line);color:var(--muted);padding:48px 0 36px;font-size:14px}
 .f-top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-.f-top img{height:34px;width:auto}
-.f-links{display:flex;gap:18px;font-weight:700;color:var(--body)}
-.f-links a:hover{color:var(--brand)}
+.f-top>img{height:34px;width:auto}
+.f-links{display:flex;gap:10px;align-items:center}
+.f-links a{display:grid;place-items:center;width:44px;height:44px;border-radius:13px;overflow:hidden;background:#fff;box-shadow:0 0 0 1px var(--line);transition:transform .25s}
+.f-links a:hover{transform:translateY(-3px)}
+.f-links img{width:100%;height:100%;object-fit:cover;display:block}
+.f-links a.pad img{width:26px;height:26px;object-fit:contain}
+.f-links a.txt{width:auto;height:auto;padding:0 6px;border-radius:0;background:none;box-shadow:none;font-weight:700;color:var(--body)}
+.f-links a.txt:hover{transform:none;color:var(--brand)}
 .f-info{margin-top:22px;line-height:2}
 .f-info span{margin-right:14px;display:inline-block}
 .f-bottom{display:flex;justify-content:space-between;gap:10px;margin-top:14px;flex-wrap:wrap}
@@ -625,15 +644,16 @@ html:not(.js) .ring .fg{stroke-dashoffset:628}
 <section class="sec" id="columns"><div class="wrap">
   <h2 class="h2 lines"><span class="ln" style="--i:0"><span>세법이 바뀌면</span></span><span class="ln" style="--i:1"><span>칼럼으로 먼저 정리합니다</span></span></h2>
   <p class="lead" data-rv>서울경제 오피니언에 부동산 세금 칼럼 「택스 리얼리티」를 연재하고 있습니다.</p>
+  <div data-rv><a class="pub" href="https://www.sedaily.com/opinion/sedIn/series/S010303815" target="_blank" rel="noopener"><img class="sd" src="https://static.sedaily.com/img/favicon-228.png" alt="" width="30" height="30" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">서울경제 오피니언<span>「택스 리얼리티」 연재</span></a></div>
   <div class="cg">
     <a class="cc feat" href="https://www.sedaily.com/article/20094091" target="_blank" rel="noopener" data-rv="scale" data-spot>
-      <div class="m2"><b>서울경제 「택스 리얼리티」 4회</b><span>2026.09.22</span></div>
+      <div class="m2"><img class="sd" src="https://static.sedaily.com/img/favicon-228.png" alt="" width="28" height="28" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><b>서울경제 「택스 리얼리티」 4회</b><span>2026.09.22</span></div>
       <h3>달라지는 1주택자 절세법</h3><p>2026년 세제개편안의 장기보유특별공제 개편이 오래 보유한 1세대 1주택자에게 어떤 영향을 주는지 정리했습니다.</p><span class="more">서울경제에서 읽기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
     </a>
     <a class="cc" href="https://www.sedaily.com/article/20083012" target="_blank" rel="noopener" data-rv data-spot style="--i:1">
-        <div class="m2"><b>서울경제 「택스 리얼리티」 3회</b><span>2026.08.25</span></div><h3>세제 혜택 줄어드는 임대아파트…매도 시점 따져야</h3><p>자동 말소가 몰리는 등록임대 아파트의 세제 혜택과, 개정안 이후 매도 시점을 어떻게 판단할지 다뤘습니다.</p><span class="more">읽기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a><a class="cc" href="https://www.sedaily.com/article/20073773" target="_blank" rel="noopener" data-rv data-spot style="--i:2">
-        <div class="m2"><b>서울경제 「택스 리얼리티」 2회</b><span>2026.07.30</span></div><h3>가족 간 부동산 이전, ‘취득세’ 복병</h3><p>증여·부담부증여·저가 양수도를 비교할 때 놓치기 쉬운 취득세 부담을 짚었습니다.</p><span class="more">읽기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a><a class="cc" href="https://www.sedaily.com/article/20060169" target="_blank" rel="noopener" data-rv data-spot style="--i:3">
-        <div class="m2"><b>서울경제 「택스 리얼리티」 1회</b><span>2026.06.25</span></div><h3>다주택 양도세 중과…세금 갈리는 ‘경우의 수’</h3><p>다시 시작된 다주택자 양도세 중과로 같은 양도차익에도 세금이 얼마나 달라지는지 사례로 비교했습니다.</p><span class="more">읽기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a><a class="cc" href="https://blog.naver.com/hamstax/224459074332" target="_blank" rel="noopener" data-rv data-spot style="--i:4"><div class="m2"><b>네이버 블로그</b><span>2026.10.30</span></div><h3>세금만 보지 않는 세무사, 함택스세무회계 함석환 대표</h3><p>대표세무사가 직접 소개하는 함택스세무회계와 상담 방식.</p><span class="more">읽기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+        <div class="m2"><img class="sd" src="https://static.sedaily.com/img/favicon-228.png" alt="" width="22" height="22" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><b>서울경제 「택스 리얼리티」 3회</b><span>2026.08.25</span></div><h3>세제 혜택 줄어드는 임대아파트…매도 시점 따져야</h3><p>자동 말소가 몰리는 등록임대 아파트의 세제 혜택과, 개정안 이후 매도 시점을 어떻게 판단할지 다뤘습니다.</p><span class="more">읽기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a><a class="cc" href="https://www.sedaily.com/article/20073773" target="_blank" rel="noopener" data-rv data-spot style="--i:2">
+        <div class="m2"><img class="sd" src="https://static.sedaily.com/img/favicon-228.png" alt="" width="22" height="22" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><b>서울경제 「택스 리얼리티」 2회</b><span>2026.07.30</span></div><h3>가족 간 부동산 이전, ‘취득세’ 복병</h3><p>증여·부담부증여·저가 양수도를 비교할 때 놓치기 쉬운 취득세 부담을 짚었습니다.</p><span class="more">읽기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a><a class="cc" href="https://www.sedaily.com/article/20060169" target="_blank" rel="noopener" data-rv data-spot style="--i:3">
+        <div class="m2"><img class="sd" src="https://static.sedaily.com/img/favicon-228.png" alt="" width="22" height="22" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><b>서울경제 「택스 리얼리티」 1회</b><span>2026.06.25</span></div><h3>다주택 양도세 중과…세금 갈리는 ‘경우의 수’</h3><p>다시 시작된 다주택자 양도세 중과로 같은 양도차익에도 세금이 얼마나 달라지는지 사례로 비교했습니다.</p><span class="more">읽기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a><a class="cc" href="https://blog.naver.com/hamstax/224459074332" target="_blank" rel="noopener" data-rv data-spot style="--i:4"><div class="m2"><img class="sd" src="https://blog.naver.com/favicon.ico" alt="" width="22" height="22" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><b>네이버 블로그</b><span>2026.10.30</span></div><h3>세금만 보지 않는 세무사, 함택스세무회계 함석환 대표</h3><p>대표세무사가 직접 소개하는 함택스세무회계와 상담 방식.</p><span class="more">읽기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
   </div>
   <div class="col-more" data-rv>
     <a class="more" href="https://www.sedaily.com/opinion/sedIn/series/S010303815" target="_blank" rel="noopener">연재 전체 보기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
@@ -673,8 +693,11 @@ html:not(.js) .ring .fg{stroke-dashoffset:628}
       <a href="https://pf.kakao.com/_CzTxan/friend" target="_blank" rel="noopener"><span class="qi" style="background:#FEE500;color:#191919"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7l-1 3.6c-.1.3.3.6.6.4l4.2-2.8c.5.1 1 .1 1.5.1 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg></span><div><b>카카오톡 채널</b><span>채널 추가 후 메시지로 문의</span></div></a>
       <a href="mailto:hamstax@naver.com"><span class="qi" style="background:rgba(255,255,255,.14);color:#fff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span><div><b>이메일</b><span>hamstax@naver.com</span></div></a>
     </div>
-    <p class="loc"><b>서울 강남구 논현로79길 62, 백악빌딩 602호</b><br>운영시간 10:00 ~ 19:00, 주차 가능 · 팩스 0504-284-6351<br>
-      <a href="https://map.naver.com/p/entry/place/1937463983" target="_blank" rel="noopener">네이버 지도</a><a href="https://map.kakao.com/?q=%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%85%BC%ED%98%84%EB%A1%9C79%EA%B8%B8%2062" target="_blank" rel="noopener">카카오맵</a></p>
+    <div class="map" data-rv>
+      <iframe src="https://www.google.com/maps?q=%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%85%BC%ED%98%84%EB%A1%9C79%EA%B8%B8%2062&z=17&hl=ko&output=embed" title="함택스세무회계 위치 지도" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <div class="map-b"><b>서울 강남구 논현로79길 62, 백악빌딩 602호</b>운영시간 10:00 ~ 19:00, 주차 가능 · 팩스 0504-284-6351
+        <div class="map-l"><a href="https://map.naver.com/p/entry/place/1937463983" target="_blank" rel="noopener">네이버 지도에서 보기</a><a href="https://map.kakao.com/?q=%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%85%BC%ED%98%84%EB%A1%9C79%EA%B8%B8%2062" target="_blank" rel="noopener">카카오맵에서 보기</a></div></div>
+    </div>
   </div>
   <div data-rv="scale"><form class="cform" id="form" novalidate>
   <h3 class="f-title">상담 신청서</h3>
@@ -706,7 +729,7 @@ html:not(.js) .ring .fg{stroke-dashoffset:628}
 
 <footer class="site-f"><div class="wrap">
   <div class="f-top"><img src="logo.svg" alt="함택스세무회계" width="127" height="34">
-    <div class="f-links"><a href="https://blog.naver.com/hamstax" target="_blank" rel="noopener">블로그</a><a href="https://pf.kakao.com/_CzTxan/friend" target="_blank" rel="noopener">카카오톡</a><a href="https://kmong.com/@%ED%95%A8%EC%84%9D%ED%99%98%EC%84%B8%EB%AC%B4%EC%82%AC" target="_blank" rel="noopener">크몽</a></div></div>
+    <script>function snsFb(i){var n=i.getAttribute('data-next');if(n){i.removeAttribute('data-next');i.src=n;return}var a=i.parentNode;a.className='txt';a.textContent=a.getAttribute('data-t')}</script><div class="f-links"><a href="https://blog.naver.com/hamstax" target="_blank" rel="noopener" class="pad" title="네이버 블로그" data-t="블로그"><img src="https://blog.naver.com/favicon.ico" alt="네이버 블로그" width="44" height="44" loading="lazy" referrerpolicy="no-referrer" onerror="snsFb(this)"></a><a href="https://pf.kakao.com/_CzTxan/friend" target="_blank" rel="noopener" class="" title="카카오톡 채널" data-t="카카오톡"><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/service/453a624d017900001.png" data-next="https://center-pf.kakao.com/favicon.ico" alt="카카오톡 채널" width="44" height="44" loading="lazy" referrerpolicy="no-referrer" onerror="snsFb(this)"></a><a href="https://kmong.com/@%ED%95%A8%EC%84%9D%ED%99%98%EC%84%B8%EB%AC%B4%EC%82%AC" target="_blank" rel="noopener" class="" title="크몽" data-t="크몽"><img src="https://kmong.com/apple-touch-icon.png" data-next="https://kmong.com/favicon.ico" alt="크몽" width="44" height="44" loading="lazy" referrerpolicy="no-referrer" onerror="snsFb(this)"></a></div></div>
   <div class="f-info"><span>상호 함택스세무회계</span><span>대표 함석환</span><span>사업자등록번호 654-23-01649</span><span>세무사 등록번호 9102705</span><br>
 <span>서울 강남구 논현로79길 62, 백악빌딩 602호</span><br>
 <span>전화 010-5099-6351</span><span>팩스 0504-284-6351</span><span>이메일 hamstax@naver.com</span></div>
