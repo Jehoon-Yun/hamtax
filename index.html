@@ -213,6 +213,9 @@ header.menu-open{background:#fff}
 .hero-g{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
 .pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:9px 16px 9px 12px;font-size:14.5px;font-weight:700;color:var(--ink);box-shadow:0 10px 30px -14px rgba(11,27,63,.35)}
 .pill b{color:var(--brand)}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill-m{padding-left:9px}
+.pill-m em{font-style:normal;font-size:11.5px;font-weight:800;letter-spacing:.05em;background:var(--ink);color:#fff;border-radius:999px;padding:5px 10px}
 .hero h1{font-size:clamp(42px,6.4vw,84px);line-height:1.14;font-weight:900;margin:26px 0 24px}
 .hero .sub{font-size:19px;color:var(--body);max-width:500px}
 .hero .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:36px}
@@ -303,6 +306,7 @@ html:not(.js) .ring .fg{stroke-dashoffset:628}
 .facts div{display:grid;grid-template-columns:170px 1fr;gap:16px;align-items:baseline;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.16)}
 .facts div:first-child{border-top:1px solid rgba(255,255,255,.16)}
 .facts dt{font-size:44px;font-weight:900;letter-spacing:-.04em;line-height:1.1;white-space:nowrap;font-feature-settings:"tnum"}
+.facts dt.w{font-size:36px;letter-spacing:-.01em}
 .facts dt small{font-size:16px;font-weight:700;margin-left:3px;letter-spacing:-.01em;color:#A9CCFF}
 .facts dd{font-size:16px;font-weight:700}
 .facts dd span{display:block;font-size:13px;color:#8C9DC4;font-weight:500;margin-top:2px}
@@ -354,9 +358,11 @@ html:not(.js) .ring .fg{stroke-dashoffset:628}
 .sd{flex:none;border-radius:6px;background:#fff;box-shadow:0 0 0 1px var(--line)}
 .cc .m2 .sd{width:22px;height:22px;margin-right:-2px}
 .cc.feat .m2 .sd{width:28px;height:28px;border-radius:8px;box-shadow:none}
-.pub{display:inline-flex;align-items:center;gap:10px;margin-top:22px;background:#fff;border-radius:999px;padding:8px 18px 8px 8px;font-size:15px;font-weight:700;color:var(--ink);box-shadow:0 10px 30px -14px rgba(11,27,63,.35),0 0 0 1px var(--line);transition:transform .25s}
+.pubs{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.pub{display:inline-flex;align-items:center;gap:10px;background:#fff;border-radius:999px;padding:8px 18px 8px 8px;font-size:15px;font-weight:700;color:var(--ink);box-shadow:0 10px 30px -14px rgba(11,27,63,.35),0 0 0 1px var(--line);transition:transform .25s}
 .pub:hover{transform:translateY(-2px)}
 .pub .sd{width:30px;height:30px;border-radius:50%}
+.pub .sd.pad{padding:6px;box-sizing:border-box;object-fit:contain}
 .pub span{color:var(--muted);font-weight:600}
 .cc .m2 b{color:var(--brand)}
 .cc.feat .m2,.cc.feat .m2 b{color:#A9CCFF}
@@ -374,7 +380,7 @@ html:not(.js) .ring .fg{stroke-dashoffset:628}
 .ab-name{font-size:clamp(40px,5.4vw,72px);line-height:1.1;font-weight:900}
 .ab-role{color:var(--brand);font-weight:800;margin:8px 0 26px;font-size:17px}
 .say2{background:#fff;border-radius:22px 22px 22px 6px;padding:20px 24px;margin-bottom:10px;font-size:17px;line-height:1.75;color:var(--ink);font-weight:500;max-width:600px}
-.say-src{font-size:13px;color:var(--muted);margin:8px 0 28px}
+.say2+.cv{margin-top:36px}
 .cv{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .cv li{display:flex;gap:10px;padding:13px 16px;background:#fff;border-radius:14px;font-size:15.5px;font-weight:700;color:var(--ink)}
 .cv li span{font-size:13px;color:var(--brand);font-weight:800;min-width:30px;padding-top:2px}
@@ -442,7 +448,7 @@ html:not(.js) .ring .fg{stroke-dashoffset:628}
   .feat:nth-child(even) .fv{order:0}
   .fv{max-width:360px;border-radius:32px}
   .np{grid-template-columns:1fr;padding:44px 26px;border-radius:32px}
-  .facts div{grid-template-columns:130px 1fr}.facts dt{font-size:34px}
+  .facts div{grid-template-columns:130px 1fr}.facts dt{font-size:34px}.facts dt.w{font-size:27px}
   .rv{padding-bottom:88px}
   .rc{width:300px}
   .cmp{padding:22px 20px;border-radius:26px}
@@ -486,7 +492,7 @@ html:not(.js) .ring .fg{stroke-dashoffset:628}
   <div class="blobs" aria-hidden="true"><i></i><i></i><i></i></div>
   <div class="wrap hero-g">
     <div>
-      <a class="pill" href="#numbers" data-rv="pop"><span class="rate" role="img" aria-label="별점 4.9점"><span class="st"><i style="width:98%"></i></span></span><span>크몽 평점 <b>4.9</b>, 리뷰 <b>436</b>건</span></a>
+      <div class="pills"><a class="pill" href="#numbers" data-rv="pop"><span class="rate" role="img" aria-label="별점 4.9점"><span class="st"><i style="width:98%"></i></span></span><span>크몽 평점 <b>4.9</b>, 리뷰 <b>436</b>건</span></a><a class="pill pill-m" href="#numbers" data-rv="pop" style="--i:2"><em>MASTER</em><span>크몽 최고 등급, 만족도 <b>100%</b></span></a></div>
       <h1 class="lines" style="--d:120ms"><span class="ln" style="--i:0"><span>세금 고민,</span></span><span class="ln" style="--i:1"><span>대표세무사에게</span></span><span class="ln" style="--i:2"><span>직접 물어보세요</span></span></h1>
       <p class="sub" data-rv style="--i:6">양도·증여·상속세가 주력인 강남 함택스세무회계입니다. 원하시면 답변에 근거 법령과 예규를 붙여 드립니다.</p>
       <div class="cta" data-rv style="--i:8">
@@ -529,7 +535,7 @@ html:not(.js) .ring .fg{stroke-dashoffset:628}
   </div>
   <div class="feat">
     <div class="fv v3" data-scrub><div><div class="ring" data-in><svg viewBox="0 0 280 280"><circle class="bg" cx="140" cy="140" r="120"/><circle class="fg" cx="140" cy="140" r="120"/></svg><div><b><span data-count="2">2</span></b><span>시간 이내</span></div></div></div></div>
-    <div><h3 class="lines"><span class="ln" style="--i:0"><span>문의에는</span></span><span class="ln" style="--i:1"><span>빠르게 답합니다</span></span></h3><p data-rv>크몽에서의 평균 응답 시간은 2시간 이내입니다. (2026.11.14 크몽 공개 프로필 기준)</p>
+    <div><h3 class="lines"><span class="ln" style="--i:0"><span>문의에는</span></span><span class="ln" style="--i:1"><span>빠르게 답합니다</span></span></h3><p data-rv>크몽에서의 평균 응답 시간은 2시간 이내입니다. (2026.11.18 크몽 공개 프로필 기준)</p>
       <blockquote data-rv style="--i:2"><span class="rate" role="img" aria-label="별점 5.0점"><span class="st"><i style="width:100%"></i></span><b>5.0</b></span><br>신속하고, 정확하고, 명쾌한 답변.<small>크몽 후기, ki*** · 2026.04.03</small></blockquote></div>
   </div>
 </div></section>
@@ -543,11 +549,12 @@ html:not(.js) .ring .fg{stroke-dashoffset:628}
     </div>
     <div>
       <dl class="facts">
+        <div><dt><span data-count="100">100</span><small>%</small></dt><dd>크몽 만족도<span>크몽 공개 프로필에 표시된 값</span></dd></div>
+        <div><dt class="w">MASTER</dt><dd>크몽 전문가 등급<span>NEW부터 MASTER까지 5개 등급 중 가장 높은 등급</span></dd></div>
         <div><dt><span data-count="118">118</span><small>건</small></dt><dd>재구매 고객이 남긴 후기<span>양도·증여 291건 중 69건, 부가세 113건 중 49건</span></dd></div>
         <div><dt><span data-count="866">866</span><small>건</small></dt><dd>크몽 누적 작업<span>크몽 공개 프로필</span></dd></div>
-        <div><dt><span data-count="278">278</span><small>건</small></dt><dd>5.0 만점을 준 리뷰<span>양도·증여 상담 291건 중</span></dd></div>
       </dl>
-      <p class="note">모든 수치는 2026.11.14에 확인했습니다. 크몽이 집계해 공개하는 값입니다.</p>
+      <p class="note">모든 수치는 2026.11.18에 확인했습니다. 크몽이 집계해 공개하는 값이며, 전문가 등급은 크몽이 매월 1일 다시 매깁니다.</p>
     </div>
   </div>
 </div></section>
@@ -643,8 +650,8 @@ html:not(.js) .ring .fg{stroke-dashoffset:628}
 
 <section class="sec" id="columns"><div class="wrap">
   <h2 class="h2 lines"><span class="ln" style="--i:0"><span>세법이 바뀌면</span></span><span class="ln" style="--i:1"><span>칼럼으로 먼저 정리합니다</span></span></h2>
-  <p class="lead" data-rv>서울경제 오피니언에 부동산 세금 칼럼 「택스 리얼리티」를 연재하고 있습니다.</p>
-  <div data-rv><a class="pub" href="https://www.sedaily.com/opinion/sedIn/series/S010303815" target="_blank" rel="noopener"><img class="sd" src="https://static.sedaily.com/img/favicon-228.png" alt="" width="30" height="30" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">서울경제 오피니언<span>「택스 리얼리티」 연재</span></a></div>
+  <p class="lead" data-rv>서울경제 오피니언에 부동산 세금 칼럼 「택스 리얼리티」를, 네이버 블로그에 세무 칼럼을 연재하고 있습니다.</p>
+  <div class="pubs" data-rv><a class="pub" href="https://www.sedaily.com/opinion/sedIn/series/S010303815" target="_blank" rel="noopener"><img class="sd" src="https://static.sedaily.com/img/favicon-228.png" alt="" width="30" height="30" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">서울경제 오피니언<span>「택스 리얼리티」 연재</span></a><a class="pub" href="https://blog.naver.com/hamstax" target="_blank" rel="noopener"><img class="sd pad" src="https://blog.naver.com/favicon.ico" alt="" width="30" height="30" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">네이버 블로그<span>세무 칼럼 연재</span></a></div>
   <div class="cg">
     <a class="cc feat" href="https://www.sedaily.com/article/20094091" target="_blank" rel="noopener" data-rv="scale" data-spot>
       <div class="m2"><img class="sd" src="https://static.sedaily.com/img/favicon-228.png" alt="" width="28" height="28" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><b>서울경제 「택스 리얼리티」 4회</b><span>2026.09.22</span></div>
@@ -668,7 +675,6 @@ html:not(.js) .ring .fg{stroke-dashoffset:628}
     <p class="ab-role" data-rv>함택스세무회계 대표세무사</p>
     <p class="say2" data-rv="left">원하신다면 상담 내용에 대한 근거 법령과 예규도 첨부해 드립니다. 정확한 상담 받으시고 발 뻗고 주무시길 바랍니다.</p>
     <p class="say2" data-rv="left" style="--i:2">스스로 판단하기에도 복잡한 사안이라면 저 말고도 두세 분의 다른 세무사께 상담을 받아 비교 검토해 보시길 적극 권합니다.</p>
-    <p class="say-src">함석환 세무사가 크몽 서비스 소개에 직접 쓴 글에서</p>
     <ul class="cv"><li data-rv style="--i:0"><span>현재</span>함택스세무회계 대표세무사</li><li data-rv style="--i:1"><span>현재</span>서울경제 「택스 리얼리티」 칼럼 연재</li><li data-rv style="--i:2"><span></span>강남구청 재산제세 상담위원</li><li data-rv style="--i:3"><span></span>현대위아 · 이노션 세무자문</li><li data-rv style="--i:4"><span>2022</span>와이제이택스라운지 세무사</li><li data-rv style="--i:5"><span>2021</span>세무사 자격 취득</li><li data-rv style="--i:6"><span>2021</span>동양생명보험 재무회계팀</li><li data-rv style="--i:7"><span></span>고려대학교 졸업</li><li data-rv style="--i:8"><span></span>안산동산고등학교 졸업</li></ul>
   </div>
 </div></section>
