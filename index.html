@@ -169,7 +169,7 @@ html:not(.js) [data-until]{display:none}
 @keyframes cue{0%{transform:scaleY(0);transform-origin:50% 0}45%{transform:scaleY(1);transform-origin:50% 0}55%{transform:scaleY(1);transform-origin:50% 100%}100%{transform:scaleY(0);transform-origin:50% 100%}}
 @keyframes dots{0%,80%,100%{transform:translateY(0);opacity:.35}40%{transform:translateY(-5px);opacity:1}}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(52,211,153,.6)}100%{box-shadow:0 0 0 12px rgba(52,211,153,0)}}
-section.paused *,section.paused *::before,section.paused *::after{animation-play-state:paused!important}
+section.paused .blobs i,section.paused .fl>div,section.paused .np::before,section.paused .ph-top span i,section.paused .pcard span i,section.paused .typing i,section.paused .tl li.on::before{animation-play-state:paused!important}
 @media (prefers-reduced-motion:reduce){
   .js [data-rv],.js [data-rv]>*,.js .lines .ln>span,.js .chars .ch,.js .grow{opacity:1!important;transform:none!important;clip-path:none!important}
   .js .lit span{opacity:1!important}
@@ -449,6 +449,17 @@ html:not(.js) .ring .fg{stroke-dashoffset:628}
 .f-bottom{display:flex;justify-content:space-between;gap:10px;margin-top:14px;flex-wrap:wrap}
 .f-bottom button{background:none;border:0;color:var(--ink);font-weight:700;font-size:14px}
 @media (max-width:1100px){.f1{left:-40px;bottom:-40px}.f2{right:-20px;top:-42px}.np{padding:54px 40px;gap:44px}.ab-g{grid-template-columns:320px 1fr;gap:48px}.feat{gap:44px}}
+.pw,.fv>div,.ab-ph img,.cc.top .no{will-change:transform}
+@media (max-width:900px){
+  /* 스크롤 성능: 흐림 필터는 휴대폰에서 가장 비싼 효과라 같은 느낌의 그라데이션으로 바꾼다 */
+  header{background:rgba(255,255,255,.97);-webkit-backdrop-filter:none;backdrop-filter:none}
+  .blobs i{filter:none;animation:none;opacity:.9!important;background:radial-gradient(circle,var(--bc,#BFD7FF) 0%,rgba(255,255,255,0) 68%)!important}
+  .blobs i:nth-child(1){--bc:#BFD7FF;width:120vw;height:120vw;right:-50vw;top:-50vw}
+  .blobs i:nth-child(2){--bc:#D9E6FF;width:100vw;height:100vw;left:-45vw;top:30vw}
+  .blobs i:nth-child(3){--bc:#C8F0FF;width:80vw;height:80vw;right:-10vw;bottom:-40vw}
+  .ct .blobs i{background:radial-gradient(circle,rgba(47,111,237,.5) 0%,rgba(47,111,237,0) 68%)!important}
+  .np::before{filter:none;animation:none;width:720px;height:720px;right:-320px;top:-360px;opacity:.75;background:radial-gradient(circle,#2F6FED 0%,rgba(47,111,237,0) 66%)}
+}
 @media (max-width:900px){
   .sec{padding:88px 0}
   .hero{padding:34px 0 80px}
@@ -797,15 +808,17 @@ html:not(.js) .ring .fg{stroke-dashoffset:628}
   // 3) 스크롤 연동
   var scrubs=$$('[data-scrub]'), scenes=$$('[data-scene]'), hz=$$('[data-hscroll]');
   function layout(){
-    hz.forEach(function(s){ var t=s.querySelector('[data-track]'); var d=Math.max(0,t.scrollWidth-s.clientWidth); s._d=d; s.style.height=(d+window.innerHeight)+'px'; });
+    hz.forEach(function(s){ var t=s.querySelector('[data-track]'); var d=Math.max(0,t.scrollWidth-s.clientWidth); s._d=d; s.style.height=(d+(s.querySelector('.pin')||s).clientHeight)+'px'; });
     mqs.forEach(function(m){ m.w=m.el.scrollWidth/2; });
   }
   var ticking=false;
   function frame(){
-    ticking=false; var vh=window.innerHeight;
-    scrubs.forEach(function(el){ var r=el.getBoundingClientRect(); if(r.bottom<-300||r.top>vh+300) return; el.style.setProperty('--p',clamp((vh-r.top)/(vh+r.height)).toFixed(4)); });
-    scenes.forEach(function(el){ var r=el.getBoundingClientRect(); if(r.bottom<-300||r.top>vh+300) return; el.style.setProperty('--p',clamp(-r.top/Math.max(1,r.height-vh)).toFixed(4)); });
-    hz.forEach(function(s){ var r=s.getBoundingClientRect(); if(r.bottom<-300||r.top>vh+300) return; var p=clamp(-r.top/Math.max(1,r.height-vh)); s.style.setProperty('--x',(-p*s._d).toFixed(1)+'px'); s.style.setProperty('--p',p.toFixed(4)); });
+    // 위치를 먼저 전부 읽고, 그다음에 한꺼번에 쓴다 (읽기·쓰기를 섞으면 스크롤 중 레이아웃 계산이 반복된다)
+    ticking=false; var vh=window.innerHeight, w=[];
+    scrubs.forEach(function(el){ var r=el.getBoundingClientRect(); if(r.bottom<-300||r.top>vh+300) return; w.push([el,'--p',clamp((vh-r.top)/(vh+r.height)).toFixed(3)]); });
+    scenes.forEach(function(el){ var r=el.getBoundingClientRect(); if(r.bottom<-300||r.top>vh+300) return; w.push([el,'--p',clamp(-r.top/Math.max(1,r.height-vh)).toFixed(3)]); });
+    hz.forEach(function(s){ var r=s.getBoundingClientRect(); if(r.bottom<-300||r.top>vh+300) return; var p=clamp(-r.top/Math.max(1,r.height-vh)); w.push([s,'--x',(-p*s._d).toFixed(1)+'px']); w.push([s,'--p',p.toFixed(3)]); });
+    for(var k=0;k<w.length;k++){ var it=w[k]; if(it[0]['_'+it[1]]!==it[2]){ it[0]['_'+it[1]]=it[2]; it[0].style.setProperty(it[1],it[2]); } }
   }
   function onScroll(){ if(!ticking){ ticking=true; requestAnimationFrame(frame); } }
   // 4) 마키 (스크롤 속도에 반응)
@@ -824,7 +837,9 @@ html:not(.js) .ring .fg{stroke-dashoffset:628}
   document.addEventListener('visibilitychange',function(){ if(!document.hidden) kick(); });
   layout(); frame();
   window.addEventListener('scroll',onScroll,{passive:true});
-  window.addEventListener('resize',function(){ layout(); frame(); });
+  // 모바일에서 주소창이 나타나거나 사라질 때(높이만 변함)는 다시 계산하지 않는다 — 스크롤 방향을 바꿀 때 끊기는 원인
+  var lastW=window.innerWidth;
+  window.addEventListener('resize',function(){ if(window.innerWidth===lastW) return; lastW=window.innerWidth; layout(); frame(); });
   window.addEventListener('load',function(){ layout(); frame(); });
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){ layout(); frame(); });
   kick(); window.addEventListener('load',kick);
@@ -881,12 +896,19 @@ html:not(.js) .ring .fg{stroke-dashoffset:628}
   function $(s,r){return (r||document).querySelector(s);}
   function $$(s,r){return [].slice.call((r||document).querySelectorAll(s));}
   var hdr=$('#hdr'), menu=$('#menu'), burger=$('#burger'), prog=$('#prog');
-  function onScroll(){
-    var y=window.scrollY;
-    if(hdr) hdr.classList.toggle('scrolled', y>8);
-    if(prog){ var h=document.documentElement.scrollHeight-window.innerHeight; prog.style.transform='scaleX('+(h>0?Math.min(1,y/h):0)+')'; }
+  var docH=0, sT=false, wasScrolled=null;
+  function measure(){ docH=document.documentElement.scrollHeight-window.innerHeight; }
+  function paint(){
+    sT=false; var y=window.scrollY, sc=y>8;
+    if(hdr&&sc!==wasScrolled){ wasScrolled=sc; hdr.classList.toggle('scrolled', sc); }
+    if(prog) prog.style.transform='scaleX('+(docH>0?Math.min(1,y/docH):0).toFixed(4)+')';
   }
-  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  function onScroll(){ if(!sT){ sT=true; requestAnimationFrame(paint); } }
+  measure(); paint();
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('load', function(){ measure(); paint(); });
+  var mW=window.innerWidth; window.addEventListener('resize', function(){ if(window.innerWidth!==mW){ mW=window.innerWidth; measure(); paint(); } });
+  setTimeout(measure, 3000);
   function closeMenu(){ if(!menu) return; menu.classList.remove('open'); hdr.classList.remove('menu-open'); burger.setAttribute('aria-expanded','false'); }
   if(burger){
     burger.addEventListener('click', function(){ var o=menu.classList.toggle('open'); hdr.classList.toggle('menu-open',o); burger.setAttribute('aria-expanded', o?'true':'false'); });
