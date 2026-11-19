@@ -410,9 +410,15 @@ html:not(.js) .ring .fg{stroke-dashoffset:377}
 .ab-role{color:var(--brand);font-weight:800;margin:8px 0 26px;font-size:17px}
 .say2{background:#fff;border-radius:22px 22px 22px 6px;padding:20px 24px;margin-bottom:10px;font-size:17px;line-height:1.75;color:var(--ink);font-weight:500;max-width:600px}
 .say2+.cv{margin-top:36px}
-.cv{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.cv li{display:flex;gap:10px;padding:13px 16px;background:#fff;border-radius:14px;font-size:15.5px;font-weight:700;color:var(--ink)}
-.cv li span{font-size:13px;color:var(--brand);font-weight:800;min-width:30px;padding-top:2px}
+.cv{display:grid;grid-template-columns:1.2fr 1fr;gap:12px;align-items:start}
+.cvg{background:#fff;border-radius:20px;padding:20px 22px 8px}
+.cvg:first-child{grid-row:span 2}
+.cvg h3{font-size:13.5px;font-weight:800;color:var(--brand-d);margin-bottom:4px}
+.cvg ul{list-style:none}
+.cvg li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:12px 0;border-top:1px solid var(--line);font-size:15.5px;font-weight:700;color:var(--ink)}
+.cvg li:first-child{border-top:0}
+.cvg li span{flex:none;font-size:12.5px;font-weight:600;color:var(--muted)}
+.cvg li span.now{color:var(--brand-d);font-weight:800}
 /* steps + faq */
 .steps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:52px;counter-reset:s}
 .steps li{counter-increment:s;background:var(--soft);border-radius:28px;padding:32px 30px 34px}
@@ -503,6 +509,7 @@ html:not(.js) .ring .fg{stroke-dashoffset:377}
   .ab-g{grid-template-columns:232px minmax(0,1fr);gap:36px;align-items:start}
   .ab-ph{position:sticky;top:96px}
   .cv{grid-template-columns:1fr}
+  .cvg:first-child{grid-row:auto}
   .steps{gap:12px}
   .steps li{padding:24px 20px 26px;border-radius:24px}
   .steps li::before{width:46px;height:46px;border-radius:15px;font-size:20px;margin-bottom:18px}
@@ -529,7 +536,7 @@ html:not(.js) .ring .fg{stroke-dashoffset:377}
   /* 떠 있던 배지 2개는 휴대폰에서 전화 화면 위에 나란히 놓는다 */
   .pw{max-width:none;display:grid;grid-template-columns:1fr 1fr;gap:10px;transform:none}
   .pw>div:first-child{grid-column:1/-1;order:2;width:100%;max-width:400px;justify-self:center}
-  .fl{position:static;white-space:normal;font-size:14.5px;padding:14px 16px;border-radius:18px;box-shadow:0 0 0 1px var(--line),0 16px 30px -22px rgba(11,27,63,.45)}
+  .fl{position:static;display:flex;align-items:center;white-space:normal;font-size:14.5px;padding:14px 16px;border-radius:18px;box-shadow:0 0 0 1px var(--line),0 16px 30px -22px rgba(11,27,63,.45)}
   .fl>div{animation:none}
   .msgs{height:406px}
   .say{height:175vh}
@@ -570,6 +577,7 @@ html:not(.js) .ring .fg{stroke-dashoffset:377}
   .ab-g{grid-template-columns:1fr;gap:26px}
   .ab-ph{max-width:none;aspect-ratio:1/1.04;border-radius:28px}
   .cv{grid-template-columns:1fr}
+  .cvg:first-child{grid-row:auto}
   .steps{grid-template-columns:1fr;gap:10px;margin-top:30px}
   .steps li{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px;padding:20px 20px 22px;border-radius:22px}
   .steps li::before{width:44px;height:44px;border-radius:14px;font-size:19px;margin:0;grid-row:1/span 2}
@@ -645,7 +653,7 @@ html:not(.js) .ring .fg{stroke-dashoffset:377}
           <div class="m doc" data-at="7500"><b>검토 의견을 보내드립니다</b><span class="sk"></span><span class="sk s2"></span><em>근거 법령</em><em>예규</em></div>
         </div>
       </div></div>
-      <div class="fl f1" data-rv="left" style="--i:9"><div>보통 30분 이내 답변<small>새벽·주말 문의 제외</small></div></div>
+      <div class="fl f1" data-rv="left" style="--i:9"><div>30분 이내 답변</div></div>
       <div class="fl f2" data-rv="right" style="--i:11"><div>재구매 후기 118건<small>크몽 리뷰 404건 중</small></div></div>
     </div>
   </div>
@@ -808,7 +816,7 @@ html:not(.js) .ring .fg{stroke-dashoffset:377}
     <p class="ab-role" data-rv>함택스세무회계 대표세무사</p>
     <p class="say2" data-rv="left">원하신다면 상담 내용에 대한 근거 법령과 예규도 첨부해 드립니다. 정확한 상담 받으시고 발 뻗고 주무시길 바랍니다.</p>
     <p class="say2" data-rv="left" style="--i:2">스스로 판단하기에도 복잡한 사안이라면 저 말고도 두세 분의 다른 세무사께 상담을 받아 비교 검토해 보시길 적극 권합니다.</p>
-    <ul class="cv"><li data-rv style="--i:0"><span>현재</span>함택스세무회계 대표세무사</li><li data-rv style="--i:1"><span>현재</span>서울경제 「택스 리얼리티」 칼럼 연재</li><li data-rv style="--i:2"><span>2025</span>강남구청 재산제세 상담위원</li><li data-rv style="--i:3"><span>2024</span>현대위아 · 이노션 세무자문</li><li data-rv style="--i:4"><span>2022</span>와이제이택스라운지 세무사</li><li data-rv style="--i:5"><span>2021</span>세무사 자격 취득</li><li data-rv style="--i:6"><span>2021</span>동양생명보험 재무회계팀</li><li data-rv style="--i:7"><span>2020</span>고려대학교 졸업</li><li data-rv style="--i:8"><span>2011</span>안산동산고등학교 졸업</li></ul>
+    <div class="cv"><div class="cvg" data-rv style="--i:0"><h3>경력</h3><ul><li>함택스세무회계 대표세무사<span class="now">현재</span></li><li>서울경제 「택스 리얼리티」 칼럼 연재<span class="now">현재</span></li><li>강남구청 재산제세 상담위원<span>2025</span></li><li>현대위아 · 이노션 세무자문<span>2024</span></li><li>와이제이택스라운지 세무사<span>2022</span></li><li>동양생명보험 재무회계팀<span>2021</span></li></ul></div><div class="cvg" data-rv style="--i:1"><h3>자격</h3><ul><li>세무사 자격 취득<span>2021</span></li></ul></div><div class="cvg" data-rv style="--i:2"><h3>학력</h3><ul><li>고려대학교 졸업<span>2020</span></li><li>안산동산고등학교 졸업<span>2011</span></li></ul></div></div>
   </div>
 </div></section>
 
@@ -870,7 +878,7 @@ html:not(.js) .ring .fg{stroke-dashoffset:377}
   <div class="f-top"><img src="logo.svg" alt="함택스세무회계" width="127" height="34">
     <div class="f-links"><a href="https://blog.naver.com/hamstax" target="_blank" rel="noopener">블로그</a><a href="https://pf.kakao.com/_CzTxan/friend" target="_blank" rel="noopener">카카오톡</a><a href="https://kmong.com/@%ED%95%A8%EC%84%9D%ED%99%98%EC%84%B8%EB%AC%B4%EC%82%AC" target="_blank" rel="noopener">크몽</a></div></div>
   <div class="f-info"><span>상호 함택스세무회계</span><span>대표 함석환</span><span>사업자등록번호 654-23-01649</span><span>세무사 등록번호 9102705</span><br>
-<span>서울 강남구 논현로79길 62, 백악빌딩 602호</span><br>
+<span>주소 서울 강남구 논현로79길 62, 백악빌딩 602호</span><br>
 <span>전화 010-5099-6351</span><span>팩스 0504-284-6351</span><span>이메일 hamstax@naver.com</span></div>
   <div class="f-bottom"><span>© <span data-year>2026</span> 함택스세무회계</span><button type="button" data-open="privacy">개인정보처리방침</button></div>
 </div></footer>
