@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://hamtax.co.kr/sitemap.xml
+#DaumWebMasterTool:b91a5cf1da7d090ee2bcb9167068d04feb688920f0423f4e8cb22733322cf349:HIcNwRrP5YqFZ/r1eI1o/A==
