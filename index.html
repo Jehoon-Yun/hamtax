@@ -142,6 +142,8 @@ body{overflow-x:clip}
 .js [data-rv="clip"]{transform:none;transition:opacity .3s;transition-delay:calc(var(--i,0)*50ms)}
 .js [data-rv="clip"]>*{clip-path:inset(0 0 100% 0);transition:clip-path .75s cubic-bezier(.7,0,.2,1);transition-delay:calc(var(--i,0)*50ms)}
 .js [data-rv="clip"].in>*{clip-path:inset(0 0 0 0)}
+.js [data-rv="wipe"]{opacity:1;transform:none;clip-path:inset(0 0 100% 0);transition:clip-path .5s cubic-bezier(.16,.84,.3,1)}
+.js [data-rv="wipe"].in{clip-path:inset(-140px -140px -140px -140px)}
 .js [data-rv].in{opacity:1;transform:none}
 .lines .ln{display:block;overflow:hidden;padding:.06em 0 .12em;margin:-.06em 0 -.12em}
 .lines .ln>span{display:block}
@@ -270,7 +272,7 @@ header.menu-open{background:#fff}
 .fv.v2{background:linear-gradient(150deg,#0B1B3F,#1E3A8A)}
 .fv.v3{background:linear-gradient(150deg,#2F6FED,#7FB0FF)}
 .pcard{width:270px;background:#fff;border-radius:30px;padding:14px 14px 20px;box-shadow:0 40px 70px -30px rgba(11,27,63,.5)}
-.pcard .im{border-radius:20px;overflow:hidden;aspect-ratio:1/1.05;background:#7d7e80}
+.pcard .im{border-radius:20px;overflow:hidden;aspect-ratio:1/1.05;background:#7d7e80 url(data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAACQBACdASoYAB4APt1orVEopaQiqAgBEBuJZwAAJ9s8MuHrtp1/tuWVsvFcfAAA+diR3Apl9W1HyapxRJ0ASnaSVhhA8kWGKbb03/0XIPvVTc6Dv4t7ij+m577W1YXh4uXTSvzAk7g+s70lvSFO70dOuUj77Inpe6Bb38OVLcpAShPt4AAAAA==) 50% 10%/cover no-repeat}
 .pcard img{width:100%;height:100%;object-fit:cover;object-position:50% 10%}
 .pcard b{display:block;font-size:20px;color:var(--ink);margin:14px 6px 0}
 .pcard span{display:flex;align-items:center;gap:7px;font-size:13.5px;color:var(--muted);font-weight:600;margin:2px 6px 0}
@@ -404,7 +406,7 @@ html:not(.js) .ring .fg{stroke-dashoffset:377}
 /* about */
 .ab{background:var(--soft)}
 .ab-g{display:grid;grid-template-columns:400px 1fr;gap:72px;align-items:center}
-.ab-ph{border-radius:36px;overflow:hidden;aspect-ratio:4/5;background:#7d7e80;box-shadow:0 50px 90px -50px rgba(11,27,63,.7)}
+.ab-ph{border-radius:36px;overflow:hidden;aspect-ratio:4/5;background:#7d7e80 url(data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAACQBACdASoYAB4APt1orVEopaQiqAgBEBuJZwAAJ9s8MuHrtp1/tuWVsvFcfAAA+diR3Apl9W1HyapxRJ0ASnaSVhhA8kWGKbb03/0XIPvVTc6Dv4t7ij+m577W1YXh4uXTSvzAk7g+s70lvSFO70dOuUj77Inpe6Bb38OVLcpAShPt4AAAAA==) 50% 0/cover no-repeat;box-shadow:0 50px 90px -50px rgba(11,27,63,.7)}
 .ab-ph picture,.pcard .im picture{display:block;width:100%;height:100%}
 .ph-top picture{display:block;flex:none;line-height:0}
 .ab-ph img{width:100%;height:116%;object-fit:cover;object-position:50% 0;transform:translate3d(0,calc((var(--p,.5) - .5)*-14%),0)}
@@ -645,7 +647,7 @@ html:not(.js) .ring .fg{stroke-dashoffset:377}
     </div>
     <div class="pw" data-scrub>
       <div data-rv="scale" style="--i:3"><div class="phone" data-tilt data-seq="12000">
-        <div class="ph-top"><picture><source srcset="profile-s.webp" type="image/webp"><img src="profile-s.jpg" alt="" width="46" height="46" decoding="async" fetchpriority="high"></picture><div><b>함석환 세무사</b><span><i></i>대표세무사가 직접 답합니다</span></div><em>상담 흐름 예시</em></div>
+        <div class="ph-top"><picture><source srcset="profile-s.webp" type="image/webp"><img src="profile-s.jpg" alt="" width="46" height="46" decoding="sync" fetchpriority="high"></picture><div><b>함석환 세무사</b><span><i></i>대표세무사가 직접 답합니다</span></div><em>상담 흐름 예시</em></div>
         <div class="msgs" aria-label="상담 흐름 예시">
           <p class="m me" data-at="700">일시적 2주택인데 비과세가 될까요?</p>
           <p class="m typing" data-at="1700" data-until="3200" aria-hidden="true"><i></i><i></i><i></i></p>
@@ -668,7 +670,7 @@ html:not(.js) .ring .fg{stroke-dashoffset:377}
 
 <section class="sec" style="padding-top:40px"><div class="wrap">
   <div class="feat">
-    <div class="fv v1" data-scrub><div><div class="pcard"><div class="im"><picture><source srcset="profile.webp" type="image/webp"><img src="profile.jpg" alt="" decoding="async" width="800" height="1000"></picture></div><b>함석환</b><span><i></i>함택스세무회계 대표세무사</span></div></div></div>
+    <div class="fv v1" data-scrub><div><div class="pcard"><div class="im"><picture><source srcset="profile-m.webp" type="image/webp"><img src="profile-m.jpg" alt="" decoding="sync" width="480" height="600"></picture></div><b>함석환</b><span><i></i>함택스세무회계 대표세무사</span></div></div></div>
     <div><h2 class="lines"><span class="ln" style="--i:0"><span>상담부터 신고까지</span></span><span class="ln" style="--i:1"><span>대표세무사가 직접</span></span></h2><p data-rv>담당자를 거치지 않습니다. 처음 문의부터 신고까지 대표세무사와 직접 이야기합니다.</p></div>
   </div>
   <div class="feat">
@@ -812,7 +814,7 @@ html:not(.js) .ring .fg{stroke-dashoffset:377}
 </div></section>
 
 <section class="sec ab" id="about"><div class="wrap ab-g">
-  <div class="ab-ph" data-scrub data-rv="clip"><picture><source srcset="profile.webp" type="image/webp"><img src="profile.jpg" alt="대표세무사 함석환" decoding="async" width="800" height="1000"></picture></div>
+  <div class="ab-ph" data-scrub data-rv="wipe" data-early><picture><source srcset="profile.webp" type="image/webp"><img src="profile.jpg" alt="대표세무사 함석환" decoding="sync" width="800" height="1000"></picture></div>
   <div>
     <h2 class="ab-name lines"><span class="ln" style="--i:0"><span>함석환</span></span></h2>
     <p class="ab-role" data-rv>함택스세무회계 대표세무사</p>
@@ -911,7 +913,8 @@ html:not(.js) .ring .fg{stroke-dashoffset:377}
   var targets=$$('[data-rv],.lines,.chars,[data-in],.grow');
   if('IntersectionObserver' in window && !RM){
     var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } }); },{threshold:.06,rootMargin:'0px 0px -3% 0px'});
-    targets.forEach(function(el){ io.observe(el); });
+    var ioE=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); ioE.unobserve(en.target); } }); },{threshold:0,rootMargin:'0px 0px 12% 0px'});
+    targets.forEach(function(el){ (el.hasAttribute('data-early')?ioE:io).observe(el); });
   } else targets.forEach(function(el){ el.classList.add('in'); });
   // 2) 카운트업
   $$('[data-count]').forEach(function(el){
@@ -955,6 +958,7 @@ html:not(.js) .ring .fg{stroke-dashoffset:377}
   var lastW=window.innerWidth;
   window.addEventListener('resize',function(){ if(window.innerWidth===lastW) return; lastW=window.innerWidth; layout(); frame(); });
   window.addEventListener('load',function(){ layout(); frame(); });
+  window.addEventListener('load',function(){ $$('picture img').forEach(function(im){ if(im.decode) im.decode().catch(function(){}); }); });
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){ layout(); frame(); });
   kick(); window.addEventListener('load',kick);
   // 4-1) 화면 밖 구역의 반복 애니메이션은 멈춰 둔다 (배터리·발열 절약)
